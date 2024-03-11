@@ -10,7 +10,7 @@ function Home() {
         <div className="home-btn">QUERO REALIZAR MEUS SONHOS</div>
       </div>
       <div className="home-img">
-        <img src="/images/GRADE DE FOTO TELA 1.png" alt="3 fotos" />
+        <img alt="3 fotos" />
       </div>
     </div>
   );
