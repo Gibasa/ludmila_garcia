@@ -46,7 +46,11 @@ function Header() {
     <Navbar expand="lg" className={`header-bg ${scrolled ? "scrolled" : ""}`}>
       <Container className="header-container">
         <Navbar.Brand className="header-logo order-lg-first" as={Link} to="/">
-          <img height="80" className="d-inline-block align-top" alt="Ludmila logo" />
+          <img
+            height="80"
+            className="d-inline-block align-top"
+            alt="Ludmila logo"
+          />
         </Navbar.Brand>
         <Navbar.Toggle
           aria-controls="basic-navbar-nav"
@@ -54,49 +58,49 @@ function Header() {
           onClick={handleNavToggle}
         />
         <Navbar.Collapse id="basic-navbar-nav" in={expanded}>
-          <Nav className="mx-auto header-links">            
+          <Nav className="mx-auto header-links">
             <div
-              className="pacientes header-link"
+              className="header-pacientes header-link"
               onMouseOver={() => setIsPacientesHovered(true)}
               onMouseLeave={() => setIsPacientesHovered(false)}
             >
               <p className="titulo">PARA PACIENTES</p>
               {isPacientesHovered && (
-                <div className="subtitulo">
-                  {/* <Nav.Link
+                <div className={`submenus ${isPacientesHovered ? "show" : ""}`}>
+                  <Nav.Link
                     as={Link}
-                    className={`header-link terapia ${
+                    className={`header-terapia ${
                       currentPath === "/terapia" ? "active" : ""
                     }`}
                     to="/terapia"
                     onClick={handleNavItemClick}
                   >
-                    <p>TERAPIA</p>
+                    TERAPIA
                   </Nav.Link>
                   <Nav.Link
                     as={Link}
-                    className={`header-link pensemagro ${
+                    className={`header-pensemagro ${
                       currentPath === "/pensemagro" ? "active" : ""
                     }`}
                     to="/pensemagro"
                     onClick={handleNavItemClick}
                   >
-                    <p>PENSE MAGRO</p>
-                  </Nav.Link> */}
+                    PENSE MAGRO
+                  </Nav.Link>
                 </div>
               )}
             </div>
             <div
-              className="psicologos header-link"
+              className="header-psicologos header-link"
               onMouseOver={() => setIsPsicologosHovered(true)}
               onMouseLeave={() => setIsPsicologosHovered(false)}
             >
               <p>PARA PSICÓLOGOS</p>
               {isPsicologosHovered && (
-                <>
-                  {/* <Nav.Link
+                <div className={`submenus ${isPacientesHovered ? "show" : ""}`}>
+                  <Nav.Link
                     as={Link}
-                    className={`header-link marketing ${
+                    className={`header-marketing ${
                       currentPath === "/marketing" ? "active" : ""
                     }`}
                     to="/marketing"
@@ -106,20 +110,20 @@ function Header() {
                   </Nav.Link>
                   <Nav.Link
                     as={Link}
-                    className={`header-link neurociencia ${
+                    className={`header-neurociencia ${
                       currentPath === "/neurociencia" ? "active" : ""
                     }`}
                     to="/neurociencia"
                     onClick={handleNavItemClick}
                   >
                     <p>NEUROCIÊNCIA DA COMPULSÃO ALIMENTAR</p>
-                  </Nav.Link> */}
-                </>
+                  </Nav.Link>
+                </div>
               )}
             </div>
             <Nav.Link
               as={Link}
-              className={`header-link apresentacao ${
+              className={`header-link header-apresentacao ${
                 currentPath === "/apresentacao" ? "active" : ""
               }`}
               to="/apresentacao"
@@ -129,7 +133,7 @@ function Header() {
             </Nav.Link>
             <Nav.Link
               as={Link}
-              className={`header-link contato ${
+              className={`header-link header-contato ${
                 currentPath === "/contato" ? "active" : ""
               }`}
               to="/contato"

@@ -1,0 +1,37 @@
+.apresentacao{
+    display: flex;
+    margin: 60px;
+    gap: 50px;
+}
+
+.apresentacao img{
+    content: url("/images/apresentacao.png");
+}
+
+
+.apresentacao-text h2{
+    color: #117eff;
+    font-size: 3rem;
+    font-style: italic;
+    font-weight: 600;
+    margin-bottom: 50px;
+}
+
+.apresentacao-text p{
+    display: flex;
+    font-weight: 550;
+}
+
+.apresentacao-points{
+    margin-top: 50px;
+}
+
+.apresentacao-points p{
+    margin: 0;
+}
+
+
+.apresentacao-point{
+    color: #8900fc;
+    padding-right: 5px;
+}

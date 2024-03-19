@@ -1,0 +1,101 @@
+.header-bg-p {
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  width: 100%;
+  height: 200px;
+  z-index: 5;
+  top: 0;
+  background-color: #8900fc;
+}
+
+.header-container.container {
+  gap: 2vw;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  display: flex;
+}
+
+.header-link-p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+}
+
+.header-link-p,
+.header-link-p:hover,
+.header-link-p:active,
+.header-link-p:focus {
+  font-size: 1.5rem !important;
+}
+
+.header-link-p p {
+  font-family: "Lato", sans-serif;
+  margin: 0;
+  color: #8900fc;
+  background-color: white;
+  height: 40px;
+  padding: 6px 25px;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  white-space: nowrap;
+  transition: 0.5s ease;
+}
+
+.header-link-p p:hover {
+  background-color: #117eff;
+}
+
+.header-pacientes p, .header-psicologos p{
+  transition: 0.5s ease;
+}
+
+.header-apresentacao, .header-contato{
+  justify-self: center;
+  align-self: center;
+  transition: 0.5s ease;
+}
+
+.header-pacientes p:hover,
+.header-psicologos p:hover {
+  height: 120px;
+  border-radius: 20px;
+  transform: translateY(32%);
+}
+.header-psicologos,
+.header-pacientes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 120px;
+  position: relative;
+}
+
+
+
+.header-bg.scrolled .header-link {
+  color: #047060;
+}
+
+.navbar-nav .header-link.active p{
+  background-color: #117eff;
+}
+
+.header-toggle {
+  color: #5de280;
+}
+
+.header-logo-p img {
+  content: url("/images/Logo Lud branco.png");
+  height: 120px;
+  background-size: contain;
+}
+
+@media (max-width: 991px) {
+  .header-container {
+    gap: 0vw;
+  }
+}

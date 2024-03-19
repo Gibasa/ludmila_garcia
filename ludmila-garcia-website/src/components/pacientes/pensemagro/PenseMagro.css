@@ -1,0 +1,179 @@
+.pense-magro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.pense-magro-top {
+  margin: 100px;
+}
+
+.pense-magro-top h2 {
+  color: #8900fc;
+  font-style: italic;
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.pense-magro-top p {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.pense-magro-balls {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 100px;
+}
+
+.pense-magro-balls > p:first-child {
+  background-color: #8900fc;
+  border-radius: 40px;
+  color: white;
+  height: 20vh;
+  font-size: 1.7rem;
+  font-weight: 600;
+  width: 20vw;
+  line-height: 27px;
+  font-style: italic;
+  display: flex;
+  padding: 50px 35px;
+  justify-content: center;
+  align-items: center;
+  margin-right: 50px;
+}
+.pense-magro-ball {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.pense-magro-ball p {
+  background-image: url("/images/BOLA DEGRADÊ.png");
+  background-size: cover;
+  width: 10vw;
+  height: 10vw;
+  background-color: white;
+  color: black;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  font-size: 1.2rem;
+}
+
+.pense-magro-arrow img {
+  content: url("/images/SETA PRETA.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 5vw;
+  display: flex;
+  padding: 20px;
+}
+
+.pense-magro-top-end {
+  background-color: #8900fc;
+  border-radius: 20px;
+  width: 90vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 30px;
+}
+
+.pense-magro-top-end p {
+  margin: 0;
+  color: white;
+  font-size: 1.8rem;
+  font-style: italic;
+}
+
+.pense-magro-bot {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 100px;
+}
+
+.pense-magro h2 {
+  color: #8900fc;
+  font-size: 3rem;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.pense-magro-bot-balls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 100px;
+}
+
+.pense-magro-bot-ball p {
+  background-image: url("/images/BOLA ROXA.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 10vw;
+  height: 10vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: 600;
+  text-align: center;
+  font-size: 1.3rem;
+  padding: 25px;
+  line-height: 21px;
+}
+
+.pense-magro-line {
+  background-color: #8900fc;
+  width: 6vw;
+  height: 10px;
+  margin-bottom: 15px;
+}
+
+.pense-magro-bot p {
+  font-weight: 600;
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+.pense-magro-bot-end {
+  border: 4px solid #8900fc;
+  border-radius: 80px;
+  margin-top: 50px;
+}
+.pense-magro-bot-end p {
+  font-size: 2.5rem;
+  color: #8900fc;
+  padding: 5px 20px;
+  margin: 0;
+  font-style: italic;
+}
+
+.pense-magro-depoimentos {
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+.swiper{
+    width: 100%;   
+}
+
+.swiper img{
+    width: 70%;    
+}
+
+.swiper-button-next{
+    padding-left: 100px;
+    margin-right: 40px;
+}
+.swiper-button-prev {
+    padding-right: 100px;
+    margin-left: 40px;
+}

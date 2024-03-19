@@ -1,0 +1,55 @@
+.footer{
+    display: flex;
+    justify-content: space-between;
+    height: 20vh;
+}
+
+.footer-text{
+    background-color: #8900fc;
+    border-radius: 0 80px 80px 0;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 30vw;
+    flex: 1;
+}
+
+.footer-text p{
+    color: white;
+    font-size: 1.5rem;
+    width: 40%;
+    padding: 5px;
+    line-height: 20px;
+    font-style: italic;
+    margin-right: 50px;
+}
+
+.footer-social{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: flex-start;
+    margin-left: 20px;
+    flex: 1;
+}
+
+.footer-icon{
+    background-image: url("/images/BOLA ROXA.png");
+    background-size: cover;
+    color: white;
+    margin: 5px;
+    width: 2vw;
+    height: 2vw;
+    font-size: 1rem;
+    padding: 10px;
+}
+
+.footer-copyright{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: #8900fc;
+    font-style: italic;
+    margin-right: 50px;
+    flex: 1;
+}

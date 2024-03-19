@@ -1,0 +1,20 @@
+.marketing-carousel{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 50px;
+}
+.marketing-carousel h2{
+    color: white;
+    font-size: 2.5rem;
+    font-style: italic;
+    font-weight: 600;
+    margin: 100px 0 50px 0;
+}
+
+.marketing-carousel iframe{
+    width: 100%;
+    margin: 10px;
+    padding: 0 5vw;
+}
