@@ -1,0 +1,80 @@
+.compulsao {
+  background-image: linear-gradient(to bottom, #8900fc, #117eff);
+  height: 100%;
+}
+.compulsao-top {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 100px;
+}
+
+.compulsao-top h2 {
+  color: white;
+  font-size: 2.5rem;
+  font-style: italic;
+  font-weight: 600;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.compulsao-top p {
+  color: white;
+  font-size: 1.4rem;
+  text-align: start;
+  width: 80%;
+}
+.compulsao-bot {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.compulsao-bot img {
+  max-width: 100%;
+  margin: 0;
+}
+
+.compulsao-bot h2,
+.compulsao-bot p {
+  z-index: 2;
+  color: white;
+  position: absolute;
+}
+
+.compulsao-bot h2 {
+  font-size: 2.5rem;
+  font-style: italic;
+  font-weight: 600;
+  width: 40%;
+  margin-left: 150px;
+  margin-bottom: 300px;
+}
+
+.compulsao-bot p {
+  font-size: 1.8rem;
+  font-style: italic;
+  width: 30%;
+  margin: 100px 150px;
+  line-height: 27px;
+}
+
+.compulsao-bot-btn {
+  background-color: #8900fc;
+  width: 40vw;
+  height: 7vh;
+  color: white;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 700px auto 0;
+  position: absolute;
+}
+
+.compulsao-bot-btn p {
+  margin: 0;
+  font-size: 1.5rem;
+  padding: 0;
+}

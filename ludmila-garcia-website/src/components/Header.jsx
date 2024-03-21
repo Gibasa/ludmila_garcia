@@ -4,15 +4,18 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
+import { Dropdown } from "react-bootstrap";
 import "./Header.css";
 
 function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [expanded, setExpanded] = useState(false);
-  const [isPacientesHovered, setIsPacientesHovered] = useState(false);
-  const [isPsicologosHovered, setIsPsicologosHovered] = useState(false);
+  const [isPacientesDropdownOpen, setIsPacientesDropdownOpen] = useState(false);
+  const [isPsicologosDropdownOpen, setIsPsicologosDropdownOpen] =
+    useState(false);
   const location = useLocation();
   const currentPath = location.pathname;
+ 
 
   useEffect(() => {
     const handleScroll = () => {
@@ -42,6 +45,43 @@ function Header() {
     setExpanded(false);
   };
 
+  const handlePacientesHoverEnter = () => {
+    setIsPacientesDropdownOpen(true);
+  };
+
+  const handlePacientesHoverLeave = () => {
+    setIsPacientesDropdownOpen(false);
+  };
+
+  const handlePsicologosHoverEnter = () => {
+    setIsPsicologosDropdownOpen(true);
+  };
+
+  const handlePsicologosHoverLeave = () => {
+    setIsPsicologosDropdownOpen(false);
+  };
+
+  function scrollToSection(sectionId) {
+    // Obter a rota atual
+    const currentPath = window.location.pathname;
+  
+    // Se o usuário não estiver na página inicial, redirecioná-lo para lá
+    if (currentPath !== "/") {
+      history.push("/");
+    }
+  
+    // Scroll para a seção desejada após um pequeno atraso
+    setTimeout(() => {
+      const section = document.getElementById(sectionId);
+      if (section) {
+        window.scrollTo({
+          top: section.offsetTop,
+          behavior: "smooth"
+        });
+      }
+    }, 100);
+  }
+
   return (
     <Navbar expand="lg" className={`header-bg ${scrolled ? "scrolled" : ""}`}>
       <Container className="header-container">
@@ -59,78 +99,49 @@ function Header() {
         />
         <Navbar.Collapse id="basic-navbar-nav" in={expanded}>
           <Nav className="mx-auto header-links">
-            <div
-              className="header-pacientes header-link"
-              onMouseOver={() => setIsPacientesHovered(true)}
-              onMouseLeave={() => setIsPacientesHovered(false)}
-            >
-              <p className="titulo">PARA PACIENTES</p>
-              {isPacientesHovered && (
-                <div className={`submenus ${isPacientesHovered ? "show" : ""}`}>
-                  <Nav.Link
-                    as={Link}
-                    className={`header-terapia ${
-                      currentPath === "/terapia" ? "active" : ""
-                    }`}
-                    to="/terapia"
-                    onClick={handleNavItemClick}
-                  >
-                    TERAPIA
-                  </Nav.Link>
-                  <Nav.Link
-                    as={Link}
-                    className={`header-pensemagro ${
-                      currentPath === "/pensemagro" ? "active" : ""
-                    }`}
-                    to="/pensemagro"
-                    onClick={handleNavItemClick}
-                  >
-                    PENSE MAGRO
-                  </Nav.Link>
-                </div>
-              )}
-            </div>
-            <div
-              className="header-psicologos header-link"
-              onMouseOver={() => setIsPsicologosHovered(true)}
-              onMouseLeave={() => setIsPsicologosHovered(false)}
-            >
-              <p>PARA PSICÓLOGOS</p>
-              {isPsicologosHovered && (
-                <div className={`submenus ${isPacientesHovered ? "show" : ""}`}>
-                  <Nav.Link
-                    as={Link}
-                    className={`header-marketing ${
-                      currentPath === "/marketing" ? "active" : ""
-                    }`}
-                    to="/marketing"
-                    onClick={handleNavItemClick}
-                  >
-                    <p>MARKETING PARA PSIS</p>
-                  </Nav.Link>
-                  <Nav.Link
-                    as={Link}
-                    className={`header-neurociencia ${
-                      currentPath === "/neurociencia" ? "active" : ""
-                    }`}
-                    to="/neurociencia"
-                    onClick={handleNavItemClick}
-                  >
-                    <p>NEUROCIÊNCIA DA COMPULSÃO ALIMENTAR</p>
-                  </Nav.Link>
-                </div>
-              )}
-            </div>
             <Nav.Link
-              as={Link}
               className={`header-link header-apresentacao ${
                 currentPath === "/apresentacao" ? "active" : ""
               }`}
               to="/apresentacao"
-              onClick={handleNavItemClick}
+              onClick={() => scrollToSection("apresentacao")}
             >
               <p>APRESENTAÇÃO</p>
             </Nav.Link>
+            <Dropdown
+              onMouseEnter={handlePacientesHoverEnter}
+              onMouseLeave={handlePacientesHoverLeave}
+              show={isPacientesDropdownOpen}
+            >
+              <Dropdown.Toggle as={Link} to="#" className="header-pacientes">
+                PARA PACIENTES
+              </Dropdown.Toggle>
+              <Dropdown.Menu>
+                <Dropdown.Item as={Link} to="/terapia">
+                  TERAPIA
+                </Dropdown.Item>
+                <Dropdown.Item as={Link} to="/pensemagro">
+                  PENSE MAGRO
+                </Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
+            <Dropdown
+              onMouseEnter={handlePsicologosHoverEnter}
+              onMouseLeave={handlePsicologosHoverLeave}
+              show={isPsicologosDropdownOpen}
+            >
+              <Dropdown.Toggle as={Link} to="#" className="header-psicologos">
+                PARA PSICÓLOGOS
+              </Dropdown.Toggle>
+              <Dropdown.Menu>
+                <Dropdown.Item as={Link} to="/marketing">
+                  MARKETING PARA PSIS
+                </Dropdown.Item>
+                <Dropdown.Item as={Link} to="/compulsao">
+                  NEUROCIÊNCIA DA COMPULSÃO ALIMENTAR
+                </Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
             <Nav.Link
               as={Link}
               className={`header-link header-contato ${

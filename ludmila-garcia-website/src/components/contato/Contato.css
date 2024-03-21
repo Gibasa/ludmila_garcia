@@ -1,0 +1,40 @@
+.contato {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.contato-text{
+    width: 40vw;
+}
+
+.contato-text h2 {
+  color: #8900fc;
+  font-size: 3.5rem;
+  font-weight: 600;
+  font-style: italic;
+}
+.contato-btn {
+  background-color: #8900fc;
+  height: 8vh;
+  width: 30vw;
+  border-radius: 50px;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  align-self: flex-start;
+  margin-top: 18vh;
+  text-decoration: none;
+}
+
+.contato-btn:hover {
+    background-color: #117EFF;
+    cursor: pointer;
+}
+
+.contato-fotos img{
+    width: 40vw;
+}

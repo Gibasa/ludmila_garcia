@@ -6,7 +6,6 @@
   height: 200px;
   z-index: 5;
   top: 0;
-  background-color: rgba(0, 0, 0, 0.0);
 }
 
 .header-container.container {
@@ -22,6 +21,7 @@
   align-items: center;
   justify-content: center;
   padding: 8px;
+  position: relative;
 }
 
 .header-link,
@@ -48,9 +48,6 @@
   background-color: #117eff;
 }
 
-.header-pacientes p, .header-psicologos p{
-  transition: 0.5s ease;
-}
 
 .header-apresentacao, .header-contato{
   justify-self: center;
@@ -60,7 +57,7 @@
 
 .header-pacientes p:hover,
 .header-psicologos p:hover {
-  height: 120px;
+  height: 40px;
   border-radius: 20px;
   transform: translateY(32%);
 }
@@ -70,7 +67,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 120px;
+  height: 40px;
   position: relative;
 }
 
@@ -92,6 +89,57 @@
   content: url("/images/itens lud.png");
   height: 120px;
   background-size: contain;
+}
+
+.header-pacientes-toggle,
+.header-psicologos-toggle {
+  font-family: "Lato", sans-serif;
+  color: white;
+  background-color: #8900fc;
+  padding: 6px 25px;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  white-space: nowrap;
+  transition: 0.5s ease;
+}
+
+.header-pacientes-toggle:hover,
+.header-psicologos-toggle:hover {
+  background-color: #117eff;
+}
+
+.header-dropdown-menu {
+  background-color: #8900fc;
+}
+
+.header-dropdown-menu .dropdown-item {
+  color: white;
+  padding: 6px 25px;
+  font-size: 1.2rem;
+  transition: 0.5s ease;
+}
+
+.header-dropdown-menu .dropdown-item:hover {
+  background-color: #117eff;
+}
+
+.dropdown-toggle{
+  font-family: "Lato", sans-serif;
+  color: white;
+  background-color: #8900fc;
+  padding: 6px 25px;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  white-space: nowrap;
+  transition: 0.5s ease;
+  text-decoration: none;
+}
+
+.dropdown{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 5px;
 }
 
 @media (max-width: 991px) {

@@ -88,7 +88,7 @@
 
 .marketing-bot-logo {
   display: flex;
-  padding: 0 15vw;
+  padding: 0 10vw;
   margin-top: 100px;
   gap: 50px;
 }
@@ -100,8 +100,9 @@
   color: white;
 }
 .marketing-bot-logo img {
-  content: url("/images/Logo Lud branco.png");
-  width: 30vw;
+  content: url("/images/LOGO PSI ALTA PER.png");
+  max-width: 30vw;
+  height: auto;
 }
 
 .marketing-bot-fotos {

@@ -2,7 +2,7 @@ import "./Apresentacao.css";
 
 function Apresentacao() {
   return (
-    <div className="apresentacao">
+    <div className="apresentacao" id="apresentacao">
       <img alt="apresentacao" />
       <div className="apresentacao-text">
         <h2>Olá, sou Ludmila Garcia</h2>
