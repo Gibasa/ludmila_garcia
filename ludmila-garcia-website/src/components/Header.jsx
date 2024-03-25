@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import { Dropdown } from "react-bootstrap";
 import "./Header.css";
@@ -15,7 +15,8 @@ function Header() {
     useState(false);
   const location = useLocation();
   const currentPath = location.pathname;
- 
+  const navigate = useNavigate();
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -61,25 +62,21 @@ function Header() {
     setIsPsicologosDropdownOpen(false);
   };
 
-  function scrollToSection(sectionId) {
-    // Obter a rota atual
-    const currentPath = window.location.pathname;
+  function scrollToSection(sectionId, delay = 100) {
   
-    // Se o usuário não estiver na página inicial, redirecioná-lo para lá
-    if (currentPath !== "/") {
-      history.push("/");
-    }
-  
-    // Scroll para a seção desejada após um pequeno atraso
-    setTimeout(() => {
-      const section = document.getElementById(sectionId);
-      if (section) {
-        window.scrollTo({
-          top: section.offsetTop,
-          behavior: "smooth"
-        });
-      }
-    }, 100);
+    return new Promise((resolve) => {
+      navigate("/");
+      setTimeout(() => {
+        const section = document.getElementById(sectionId);
+        if (section) {
+          window.scrollTo({
+            top: section.offsetTop,
+            behavior: "smooth",
+          });
+        }
+        resolve();
+      }, delay);
+    });
   }
 
   return (
@@ -103,7 +100,7 @@ function Header() {
               className={`header-link header-apresentacao ${
                 currentPath === "/apresentacao" ? "active" : ""
               }`}
-              to="/apresentacao"
+              to="/"
               onClick={() => scrollToSection("apresentacao")}
             >
               <p>APRESENTAÇÃO</p>
@@ -113,7 +110,7 @@ function Header() {
               onMouseLeave={handlePacientesHoverLeave}
               show={isPacientesDropdownOpen}
             >
-              <Dropdown.Toggle as={Link} to="#" className="header-pacientes">
+              <Dropdown.Toggle as={Link} to="#" className="header-pacientes header-dropdown-toggle">
                 PARA PACIENTES
               </Dropdown.Toggle>
               <Dropdown.Menu>
@@ -130,7 +127,7 @@ function Header() {
               onMouseLeave={handlePsicologosHoverLeave}
               show={isPsicologosDropdownOpen}
             >
-              <Dropdown.Toggle as={Link} to="#" className="header-psicologos">
+              <Dropdown.Toggle as={Link} to="#" className="header-psicologos header-dropdown-toggle">
                 PARA PSICÓLOGOS
               </Dropdown.Toggle>
               <Dropdown.Menu>

@@ -1,4 +1,5 @@
 import "./PenseMagro.css";
+import { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation } from 'swiper/modules';
 import 'swiper/css';
@@ -10,8 +11,33 @@ import "./PenseMagro.css";
 
 
 function PenseMagro() {
-  const numeros = Array.from({ length: 7 }, (v, i) => i + 1);
+  const numeros = Array.from({ length: 6 }, (v, i) => i + 1);
+  const [isMobile, setIsMobile] = useState(false);
+  const [isTablet, setIsTablet] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      const width = window.innerWidth;
+      if (width <= 599) {
+        setIsMobile(true);
+        setIsTablet(false);
+      } else if (width <= 899) {
+        setIsMobile(false);
+        setIsTablet(true);
+      } else {
+        setIsMobile(false);
+        setIsTablet(false);
+      }
+    };
   
+    window.addEventListener("resize", handleResize);
+  
+    handleResize();
+  
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   
   return (
     <div className="pense-magro">
@@ -95,10 +121,12 @@ function PenseMagro() {
         </div>
       </div>
       <div className="pense-magro-depoimentos">
+      
+        
         <Swiper
         modules={[Navigation, Autoplay]}
-          slidesPerView={3}
-          navigation
+          slidesPerView={isMobile || isTablet ? 1 : 3}
+          navigation={isMobile ? false : true}
           pagination={{ clickable: true }}
           autoplay={{ delay: 2000 }}
           loop={true}
@@ -106,7 +134,7 @@ function PenseMagro() {
           {numeros.map((n) => (
             <SwiperSlide key={n}>
               <img
-                src={`/images/depo ${n}.png`}
+                src={`./images/comentario ${n}.png`}
                 alt={`Imagem ${n}`}
                 className="d-block mx-auto"
               />

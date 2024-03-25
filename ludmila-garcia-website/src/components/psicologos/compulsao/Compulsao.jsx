@@ -53,7 +53,7 @@ function Compulsao() {
         </p>
       </div>
       <div className="compulsao-bot">
-        <img src="/images/lud site.png" alt="background image" />
+        <img src="./images/lud site.png" alt="background image" />
         <h2>
           Alcance sua liberdade e revolucione seus resultados terapêuticos!
         </h2>
@@ -61,9 +61,11 @@ function Compulsao() {
           São 12 aulas focadas em desvendar os mecanismos neurais por trás da
           compulsão alimentar e da obesidade.
         </p>
-        {/* <div className="compulsao-bot-btn">
+        {/* <Link
+            to="https://api.whatsapp.com/send?phone=557192024225&text=Ol%C3%A1,%20vim%20do%20seu%20site"
+            target="_blank" className="compulsao-bot-btn">
           <p>Invista em sua carreira e faça a diferença na vida de seus pacientes</p>
-        </div> */}
+       </Link> */}
       </div>
     </div>
   );

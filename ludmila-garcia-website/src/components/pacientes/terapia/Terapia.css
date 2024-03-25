@@ -3,7 +3,6 @@
   flex-direction: column;
   justify-content: center;
   background-image: url("/images/FUNDO DEGRADÊ.png");
-  
 }
 
 .terapia-banner {
@@ -15,15 +14,15 @@
 .terapia-banner h2 {
   position: absolute;
   left: 2%;
-  top: 40%;
+  top: 20vh;
   background-color: #117eff;
   font-style: italic;
   color: white;
   border-radius: 20px;
-  padding: 10px;
-  font-size: 3rem;
+  padding: 1rem;
+  font-size: 2.6vw;
   font-weight: 600;
-  width: 30vw;
+  width: 28vw;
 }
 
 .terapia-banner img {
@@ -45,7 +44,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin: 0 100px;
+  margin: 0 10vw;
 }
 
 .terapia-passos img {
@@ -62,12 +61,17 @@
   justify-content: center;
   align-items: center;
   align-self: center;
-  margin: 100px;
+  margin: 10vw;
+  text-decoration: none;
+}
+
+.terapia-button:hover {
+  background-color: #8900fc;
 }
 
 .terapia-button p {
   margin: 7px;
-  font-size: 1.5rem;
+  font-size: 1.5vw;
 }
 
 .terapia-content-bot {
@@ -111,10 +115,56 @@
   font-weight: 550;
 }
 
-.terapia-footer{
-    color: #8900fc;
-    font-style: italic;
-    font-size: 1.5rem;
-    margin: 50px 100px 0;
-    font-weight: 600;
+.terapia-footer {
+  color: #8900fc;
+  font-style: italic;
+  font-size: 1.5rem;
+  margin: 50px 100px 0;
+  font-weight: 600;
+}
+
+@media (max-width: 599px) {
+  .terapia-banner h2 {
+    top: 10vh;
+  }
+  .terapia-passos {
+    margin: 5vw;
+    flex-direction: column;
+    gap: 50px;
+  }
+  .terapia-passos img {
+    max-width: 50vw;
+  }
+
+  .terapia-button{
+    width: 60vw;
+  }
+
+  .terapia-button p{
+    font-size: 3vw;
+  }
+  .terapia-content-bot, .terapia-footer{
+    margin: 0 30px;
+  }
+}
+@media (min-width: 600px) and (max-width: 899px) {
+  .terapia-banner h2 {
+    top: 10vh;
+  }
+  .terapia-passos {
+    margin: 0 5vw;
+  }
+  .terapia-passos img {
+    max-width: 25vw;
+  }
+
+  .terapia-button{
+    width: 60vw;
+  }
+
+  .terapia-button p{
+    font-size: 1.3rem;
+  }
+}
+@media (min-width: 900px) and (max-width: 1199px) {
 }

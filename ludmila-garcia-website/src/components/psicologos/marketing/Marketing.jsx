@@ -1,5 +1,6 @@
 import "./Marketing.css";
 import MarketingCarousel from "./MarketingCarousel";
+import { Link } from "react-router-dom";
 
 function Marketing() {
   return (
@@ -120,28 +121,36 @@ function Marketing() {
             semana
           </p>
         </div>
-        <div className="marketing-btn">
+        <Link
+          to="https://api.whatsapp.com/send?phone=557192024225&text=Ol%C3%A1,%20vim%20do%20seu%20site"
+          target="_blank"
+          className="marketing-btn"
+        >
           <p>QUERO TER ALTA PERFORMANCE</p>
-        </div>
+        </Link>
       </div>
       <div className="marketing-bot-logo">
-        <img  alt="logo black" />
+        <img alt="logo black" />
         <h2>
           Seja uma profissional que faz a diferença e viva o melhor da
           psicologia!
         </h2>
       </div>
       <div className="marketing-bot-fotos">
-        <img src="/images/FOTO 1.png" alt="foto 1" />
-        <img src="/images/FOTO 2.png" alt="foto 2" />
-        <img src="/images/FOTO 3.png" alt="foto 3" />
+        <img src="./images/FOTO 1.png" alt="foto 1" />
+        <img src="./images/FOTO 2.png" alt="foto 2" />
+        <img src="./images/FOTO 3.png" alt="foto 3" />
         <div className="marketing-bot-fotos-banner">
           <p>Hoje vivo da psicologia na Suiça e atendendo 100% online.</p>
         </div>
       </div>
-        <div className="marketing-bot-btn">
-          <p>QUERO TER SUCESSO COMO PSICÓLOGA(O)</p>
-        </div>
+      <Link
+        to="https://api.whatsapp.com/send?phone=557192024225&text=Ol%C3%A1,%20vim%20do%20seu%20site"
+        target="_blank"
+        className="marketing-bot-btn"
+      >
+        <p>QUERO TER SUCESSO COMO PSICÓLOGA(O)</p>
+      </Link>
     </div>
   );
 }

@@ -3,9 +3,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-bottom: 50px;
 }
 .pense-magro-top {
-  margin: 100px;
+  margin: 10vw 10vw 0 10vw;
 }
 
 .pense-magro-top h2 {
@@ -32,16 +33,16 @@
   border-radius: 40px;
   color: white;
   height: 20vh;
-  font-size: 1.7rem;
+  font-size: 1.6vw;
   font-weight: 600;
   width: 20vw;
   line-height: 27px;
   font-style: italic;
   display: flex;
-  padding: 50px 35px;
+  padding: 4vw 2vw;
   justify-content: center;
   align-items: center;
-  margin-right: 50px;
+  margin-right: 4vw;
 }
 .pense-magro-ball {
   display: flex;
@@ -62,7 +63,7 @@
   justify-content: center;
   align-items: center;
   padding: 16px;
-  font-size: 1.2rem;
+  font-size: 1.3vw;
 }
 
 .pense-magro-arrow img {
@@ -96,12 +97,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 100px;
+  margin: 10vw;
 }
 
 .pense-magro h2 {
   color: #8900fc;
-  font-size: 3rem;
+  font-size: 5vw;
   font-style: italic;
   font-weight: 600;
 }
@@ -125,7 +126,7 @@
   color: white;
   font-weight: 600;
   text-align: center;
-  font-size: 1.3rem;
+  font-size: 5vw;
   padding: 25px;
   line-height: 21px;
 }
@@ -161,19 +162,98 @@
   display: grid;
   place-items: center;
 }
-.swiper{
-    width: 100%;   
+.swiper {
+  width: 100%;
 }
 
-.swiper img{
-    width: 70%;    
+.swiper img {
+  width: 30vw;
 }
 
-.swiper-button-next{
-    padding-left: 100px;
-    margin-right: 40px;
+.swiper-button-next::after {
+  padding-left: 70px;
+  background-image: url("./images/SETA ROXA DIREITA.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 6vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #8900fc;
 }
-.swiper-button-prev {
-    padding-right: 100px;
-    margin-left: 40px;
+.swiper-button-prev::after {
+  padding-right: 100px;
+  margin-left: 120px;
+  background-image: url("./images/SETA ROXA ESQUERDA.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 6vw;
+  color: #8900fc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 599px) {
+  .pense-magro-balls {
+    flex-direction: column;
+  }
+  .pense-magro-balls > p:first-child {
+    width: 60vw;
+    font-size: 5vw;
+    line-height: 45px;
+  }
+  .pense-magro-ball p {
+    width: 30vw;
+    height: 30vw;
+    font-size: 4vw;
+  }
+  .pense-magro-arrow img {
+    height: 15vw;
+    transform: rotate(90deg);
+    margin: 10px 0;
+  }
+  .swiper img {
+    width: 60vw;
+  }
+}
+@media (min-width: 600px) and (max-width: 899px) {
+  .pense-magro-balls {
+    flex-direction: column;
+  }
+  .pense-magro-balls > p:first-child {
+    width: 60vw;
+    font-size: 5vw;
+    line-height: 45px;
+  }
+  .pense-magro-ball p {
+    width: 30vw;
+    height: 30vw;
+    font-size: 4vw;
+  }
+  .pense-magro-arrow img {
+    height: 10vw;
+    transform: rotate(90deg);
+    margin: 10px 0;
+  }
+
+  .pense-magro-bot-balls {
+    flex-direction: column;
+  }
+  .pense-magro-bot-ball p {
+    width: 30vw;
+    height: 30vw;
+    font-size: 4vw;
+    line-height: 45px;
+  }
+
+  .pense-magro-line {
+    transform: rotate(90deg);
+  }
+
+  .swiper img {
+    width: 60vw;
+  }
+}
+@media (min-width: 900px) and (max-width: 1199px) {
 }

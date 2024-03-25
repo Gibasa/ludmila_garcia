@@ -14,7 +14,31 @@
 }
 
 .marketing-carousel iframe{
-    width: 100%;
+    width: 90%;
     margin: 10px;
     padding: 0 5vw;
 }
+
+.marketing-carousel .swiper-button-next::after {
+    padding-left: 90px;
+    background-image: url("./images/SETA BRANCA DIREITA.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 6vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }
+  .marketing-carousel .swiper-button-prev::after {
+    padding-right: 140px;
+    margin-left: 120px;
+    background-image: url("./images/SETA BRANCA ESQUERDA.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 6vw;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }

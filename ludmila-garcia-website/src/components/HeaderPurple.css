@@ -22,6 +22,7 @@
   align-items: center;
   justify-content: center;
   padding: 8px;
+  position: relative;
 }
 
 .header-link-p,
@@ -39,18 +40,18 @@
   height: 40px;
   padding: 6px 25px;
   border-radius: 50px;
-  font-size: 1.2rem;
+  font-size: 1.3vw;
   white-space: nowrap;
   transition: 0.5s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .header-link-p p:hover {
   background-color: #117eff;
 }
 
-.header-pacientes p, .header-psicologos p{
-  transition: 0.5s ease;
-}
 
 .header-apresentacao, .header-contato{
   justify-self: center;
@@ -58,29 +59,38 @@
   transition: 0.5s ease;
 }
 
-.header-pacientes p:hover,
-.header-psicologos p:hover {
-  height: 120px;
+.header-pacientes-p p:hover,
+.header-psicologos-p p:hover {
+  height: 40px;
   border-radius: 20px;
   transform: translateY(32%);
 }
-.header-psicologos,
-.header-pacientes {
+.header-psicologos-p,
+.header-pacientes-p {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 120px;
+  height: 40px;
   position: relative;
+  font-family: "Lato", sans-serif;
+  color: #8900fc;
+  background-color: white;
+  padding: 6px 25px;
+  border-radius: 50px;
+  font-size: 1.3vw;
+  white-space: nowrap;
+  transition: 0.5s ease;
+  text-decoration: none;
 }
 
 
 
-.header-bg.scrolled .header-link {
+.header-bg.scrolled .header-link-p {
   color: #047060;
 }
 
-.navbar-nav .header-link.active p{
+.navbar-nav .header-link-p.active p{
   background-color: #117eff;
 }
 
@@ -94,35 +104,13 @@
   background-size: contain;
 }
 
-.header-pacientes-toggle,
-.header-psicologos-toggle {
-  font-family: "Lato", sans-serif;
-  color: white;
-  background-color: #8900fc;
-  padding: 6px 25px;
-  border-radius: 50px;
-  font-size: 1.2rem;
-  white-space: nowrap;
-  transition: 0.5s ease;
-}
-
-.header-pacientes-toggle:hover,
-.header-psicologos-toggle:hover {
-  background-color: #117eff;
-}
 
 .header-dropdown-menu {
-  background-color: #8900fc;
-}
-
-.dropdown{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-color: white;
 }
 
 .header-dropdown-menu .dropdown-item {
-  color: white;
+  color: #8900fc;
   padding: 6px 25px;
   font-size: 1.2rem;
   transition: 0.5s ease;
@@ -132,17 +120,15 @@
   background-color: #117eff;
 }
 
-.dropdown-toggle{
-  font-family: "Lato", sans-serif;
-  color: white;
-  background-color: #8900fc;
-  padding: 6px 25px;
-  border-radius: 50px;
-  font-size: 1.2rem;
-  white-space: nowrap;
-  transition: 0.5s ease;
-  text-decoration: none;
-  
+.dropdown{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 5px;
+}
+
+.header-dropdown-toggle::after {
+  display: none !important;
 }
 
 @media (max-width: 991px) {

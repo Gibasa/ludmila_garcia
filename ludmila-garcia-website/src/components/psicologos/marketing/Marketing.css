@@ -2,11 +2,12 @@
   background-color: #8900fc;
   width: 100%;
   height: 100%;
+  padding-bottom: 50px;
 }
 
 .marketing-top {
   color: white;
-  margin: 0 100px;
+  margin: 0 8vw;
 }
 
 .marketing-top h2 {
@@ -35,7 +36,7 @@
   background-color: white;
   color: #8900fc;
   border-radius: 20px;
-  padding: 30px;
+  padding: 2vw 4vw;
 }
 
 .marketing-cronograma-modulo h3 {
@@ -61,9 +62,9 @@
 .marketing-bot-box {
   background-color: white;
   color: #8900fc;
-  margin: 50px 150px;
+  margin: 4vw 7vw;
   border-radius: 20px;
-  padding: 100px;
+  padding: 4vw 4vw;
 }
 
 .marketing-bot-box p {
@@ -79,30 +80,35 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  text-decoration: none;
+}
+
+.marketing-btn:hover {
+  background-color: white;
+  color: #8900fc;
 }
 
 .marketing-btn p {
   margin: 7px;
-  font-size: 1.5rem;
+  font-size: 1.5vw;
 }
 
 .marketing-bot-logo {
   display: flex;
   padding: 0 10vw;
-  margin-top: 100px;
-  gap: 50px;
+  margin-top: 50px;
+  gap: 5vw;
 }
 
 .marketing-bot-logo h2 {
-  font-size: 2.5rem;
+  font-size: 2.5vw;
   font-style: italic;
   font-weight: 600;
   color: white;
 }
 .marketing-bot-logo img {
   content: url("/images/LOGO PSI ALTA PER.png");
-  max-width: 30vw;
-  height: auto;
+  width: 30vw;
 }
 
 .marketing-bot-fotos {
@@ -110,7 +116,7 @@
   justify-content: center;
   align-items: center;
   gap: 30px;
-  margin-top: 100px;
+  margin-top: 8vw;
 }
 
 .marketing-bot-fotos img {
@@ -122,13 +128,13 @@
   background-color: white;
   border-radius: 20px;
   padding: 10px;
-  margin-top: 200px;
+  margin-top: 12vw;
 }
 
 .marketing-bot-fotos-banner p {
   margin: 0;
   color: #117eff;
-  font-size: 1.5rem;
+  font-size: 1.7vw;
   font-weight: 600;
 }
 
@@ -142,9 +148,83 @@
   justify-content: center;
   align-items: center;
   margin: 50px auto 0;
+  text-decoration: none;
+}
+
+.marketing-bot-btn:hover {
+  background-color: white;
+  color: #8900fc;
 }
 
 .marketing-bot-btn p {
   margin: 7px;
-  font-size: 1.5rem;
+  font-size: 1.6vw;
+}
+
+@media (max-width: 599px) {
+  .marketing-btn {
+    width: 70vw;
+  }
+
+  .marketing-btn p {
+    font-size: 3vw;
+  }
+
+  .marketing-bot-logo {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .marketing-bot-logo img {
+    width: 60vw;
+  }
+
+  .marketing-bot-logo h2 {
+    font-size: 4vw;
+    text-align: center;
+  }
+
+  .marketing-bot-fotos img {
+    width: 25vw;
+  }
+
+  .marketing-bot-fotos-banner p {
+    font-size: 2.5vw;
+  }
+  
+  .marketing-bot-btn {
+    width: 60vw;
+  }
+
+  .marketing-bot-btn p {
+    font-size: 2.5vw;
+  }
+}
+@media (min-width: 600px) and (max-width: 899px) {
+  .marketing-btn {
+    width: 60vw;
+  }
+
+  .marketing-btn p {
+    font-size: 2.7vw;
+  }
+
+  .marketing-bot-btn {
+    width: 60vw;
+  }
+
+  .marketing-bot-btn p {
+    font-size: 2.5vw;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1199px) {
+  .marketing-btn {
+    width: 50vw;
+  }
+
+  .marketing-btn p {
+    font-size: 2.2vw;
+  }
 }

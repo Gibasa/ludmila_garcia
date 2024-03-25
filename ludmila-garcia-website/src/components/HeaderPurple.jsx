@@ -2,10 +2,10 @@ import { useState, useEffect } from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import { Dropdown } from "react-bootstrap";
-import "./Header.css";
+import "./HeaderPurple.css";
 
 function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -15,6 +15,8 @@ function Header() {
     useState(false);
   const location = useLocation();
   const currentPath = location.pathname;
+  const navigate = useNavigate();
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -60,10 +62,27 @@ function Header() {
     setIsPsicologosDropdownOpen(false);
   };
 
+  function scrollToSection(sectionId, delay = 100) {
+  
+    return new Promise((resolve) => {
+      navigate("/");
+      setTimeout(() => {
+        const section = document.getElementById(sectionId);
+        if (section) {
+          window.scrollTo({
+            top: section.offsetTop,
+            behavior: "smooth",
+          });
+        }
+        resolve();
+      }, delay);
+    });
+  }
+
   return (
-    <Navbar expand="lg" className={`header-bg ${scrolled ? "scrolled" : ""}`}>
+    <Navbar expand="lg" className={`header-bg-p ${scrolled ? "scrolled" : ""}`}>
       <Container className="header-container">
-        <Navbar.Brand className="header-logo order-lg-first" as={Link} to="/">
+        <Navbar.Brand className="header-logo-p order-lg-first" as={Link} to="/">
           <img
             height="80"
             className="d-inline-block align-top"
@@ -78,12 +97,11 @@ function Header() {
         <Navbar.Collapse id="basic-navbar-nav" in={expanded}>
           <Nav className="mx-auto header-links">
             <Nav.Link
-              as={Link}
-              className={`header-link header-apresentacao ${
+              className={`header-link-p header-apresentacao ${
                 currentPath === "/apresentacao" ? "active" : ""
               }`}
-              to="/apresentacao"
-              onClick={handleNavItemClick}
+              to="/"
+              onClick={() => scrollToSection("apresentacao")}
             >
               <p>APRESENTAÇÃO</p>
             </Nav.Link>
@@ -92,11 +110,7 @@ function Header() {
               onMouseLeave={handlePacientesHoverLeave}
               show={isPacientesDropdownOpen}
             >
-              <Dropdown.Toggle
-                as={Link}
-                to="#"
-                className="header-pacientes"
-              >
+              <Dropdown.Toggle as={Link} to="#" className="header-pacientes-p header-dropdown-toggle">
                 PARA PACIENTES
               </Dropdown.Toggle>
               <Dropdown.Menu>
@@ -113,11 +127,7 @@ function Header() {
               onMouseLeave={handlePsicologosHoverLeave}
               show={isPsicologosDropdownOpen}
             >
-              <Dropdown.Toggle
-                as={Link}
-                to="#"
-                className="header-psicologos"
-              >
+              <Dropdown.Toggle as={Link} to="#" className="header-psicologos-p header-dropdown-toggle">
                 PARA PSICÓLOGOS
               </Dropdown.Toggle>
               <Dropdown.Menu>
@@ -129,10 +139,9 @@ function Header() {
                 </Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
-            
             <Nav.Link
               as={Link}
-              className={`header-link header-contato ${
+              className={`header-link-p header-contato ${
                 currentPath === "/contato" ? "active" : ""
               }`}
               to="/contato"

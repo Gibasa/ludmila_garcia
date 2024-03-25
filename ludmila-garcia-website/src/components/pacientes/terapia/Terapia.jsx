@@ -1,4 +1,5 @@
 import "./Terapia.css";
+import { Link } from "react-router-dom";
 
 function Terapia() {
   return (
@@ -25,14 +26,18 @@ function Terapia() {
       </div>
 
       <div className="terapia-passos">
-        <img src="/images/PASSO 1.png" alt="passo1" />
-        <img src="/images/PASSO 2.png" alt="passo2" />
-        <img src="/images/PASSO 3.png" alt="passo3" />
+        <img src="./images/PASSO 1.png" alt="passo1" />
+        <img src="./images/PASSO 2.png" alt="passo2" />
+        <img src="./images/PASSO 3.png" alt="passo3" />
       </div>
 
-      <div className="terapia-button">
+      <Link
+        to="https://api.whatsapp.com/send?phone=557192024225&text=Ol%C3%A1,%20vim%20do%20seu%20site"
+        target="_blank"
+        className="terapia-button"
+      >
         <p>QUERO SABER MAIS DETALHES</p>
-      </div>
+      </Link>
       <div className="terapia-content-bot">
         <div className="terapia-content-bot-1">
           <h2>Benefícios da terapia online:</h2>
@@ -85,15 +90,19 @@ function Terapia() {
       </div>
       <div className="terapia-footer">
         <p>
-          VALE LEMBRAR: As sessões de terapia online são realizadas
-          através de videochamadas em plataformas seguras e confiáveis. Você
-          pode ter acesso à terapia de qualquer lugar com acesso a internet, no
-          conforto da sua casa ou trabalho.
+          VALE LEMBRAR: As sessões de terapia online são realizadas através de
+          videochamadas em plataformas seguras e confiáveis. Você pode ter
+          acesso à terapia de qualquer lugar com acesso a internet, no conforto
+          da sua casa ou trabalho.
         </p>
       </div>
-      <div className="terapia-button">
+      <Link
+        to="https://api.whatsapp.com/send?phone=557192024225&text=Ol%C3%A1,%20vim%20do%20seu%20site"
+        target="_blank"
+        className="terapia-button"
+      >
         <p>QUERO MARCAR MINHA REUNIÃO</p>
-      </div>
+      </Link>
     </div>
   );
 }

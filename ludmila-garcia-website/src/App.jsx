@@ -2,25 +2,37 @@ import "./App.css";
 import Header from "./components/header";
 import HeaderPurple from "./components/HeaderPurple";
 import Home from "./components/home/Home";
-import { HashRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import {
+  HashRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Terapia from "./components/pacientes/terapia/Terapia";
-// import Footer from './components/Footer';
+import Footer from "./components/Footer";
+import FooterPurple from "./components/FooterPurple";
 import PenseMagro from "./components/pacientes/pensemagro/PenseMagro";
 import Marketing from "./components/psicologos/marketing/Marketing";
 import Compulsao from "./components/psicologos/compulsao/Compulsao";
 import Contato from "./components/contato/Contato";
 
-
 function App() {
   function HeaderContainer() {
     const location = useLocation();
-    const isMarketingOrCompulsao = location.pathname === "/marketing" || location.pathname === "/compulsao";
+    const isMarketingOrCompulsao =
+      location.pathname === "/marketing" || location.pathname === "/compulsao";
     return isMarketingOrCompulsao ? <HeaderPurple /> : <Header />;
+  }
+  function FooterContainer() {
+    const location = useLocation();
+    const isMarketingOrCompulsao =
+      location.pathname === "/marketing" || location.pathname === "/compulsao";
+    return isMarketingOrCompulsao ? <FooterPurple /> : <Footer />;
   }
   return (
     <Router>
-       <HeaderContainer />
+      <HeaderContainer />
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/terapia" element={<Terapia />}></Route>
@@ -29,7 +41,7 @@ function App() {
         <Route path="/compulsao" element={<Compulsao />}></Route>
         <Route path="/contato" element={<Contato />}></Route>
       </Routes>
-      {/* <Footer/> */}
+      <FooterContainer />
     </Router>
   );
 }
