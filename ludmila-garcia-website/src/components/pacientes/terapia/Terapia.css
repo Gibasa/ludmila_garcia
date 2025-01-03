@@ -2,7 +2,17 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.terapia-bg {
   background-image: url("/images/FUNDO DEGRADÊ.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .terapia-banner {
@@ -14,7 +24,7 @@
 .terapia-banner h2 {
   position: absolute;
   left: 2%;
-  top: 20vh;
+  margin-bottom: 15vw;
   background-color: #117eff;
   font-style: italic;
   color: white;
@@ -23,6 +33,7 @@
   font-size: 2.6vw;
   font-weight: 600;
   width: 28vw;
+  text-align: center;
 }
 
 .terapia-banner img {
@@ -40,11 +51,18 @@
   font-size: 1.2rem;
 }
 
+.terapia-passos-button {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 1vw 0 0 0;
+}
+
 .terapia-passos {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin: 0 10vw;
+  margin: 0;
 }
 
 .terapia-passos img {
@@ -53,16 +71,17 @@
 
 .terapia-button {
   background-color: #117eff;
-  width: 30vw;
-  height: 7vh;
+  padding: 6px 25px;
   color: white;
   border-radius: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
   align-self: center;
-  margin: 10vw;
+  justify-self: center;
+  margin: 5vw 0 0vw 0;
   text-decoration: none;
+  width: 30vw;
 }
 
 .terapia-button:hover {
@@ -70,18 +89,18 @@
 }
 
 .terapia-button p {
-  margin: 7px;
-  font-size: 1.5vw;
+  margin: 0;
+  font-size: 1.4vw;
 }
 
 .terapia-content-bot {
-  margin: 0 100px;
+  margin: 5vw 100px 0 100px;
 }
 
 .terapia-content-bot-1 h2,
 .terapia-content-bot-2 h2 {
   color: #8900fc;
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 600;
   font-style: italic;
   margin-bottom: 30px;
@@ -118,14 +137,25 @@
 .terapia-footer {
   color: #8900fc;
   font-style: italic;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   margin: 50px 100px 0;
   font-weight: 600;
 }
 
+.btn-bot {
+  margin-bottom: 5vw;
+}
+
 @media (max-width: 599px) {
   .terapia-banner h2 {
-    top: 10vh;
+    top: 52vw;
+    padding: 2vw;
+    font-size: 3.5vw;
+    width: 40vw;
+  }
+
+  .terapia-content-top p {
+    font-size: 3.5vw;
   }
   .terapia-passos {
     margin: 5vw;
@@ -133,23 +163,42 @@
     gap: 50px;
   }
   .terapia-passos img {
-    max-width: 50vw;
+    max-width: 65vw;
   }
 
-  .terapia-button{
+  .terapia-button {
     width: 60vw;
+    margin-bottom: 5vw;
   }
 
-  .terapia-button p{
+  .terapia-button p {
     font-size: 3vw;
   }
-  .terapia-content-bot, .terapia-footer{
-    margin: 0 30px;
+  .terapia-content-bot,
+  .terapia-footer {
+    margin: 10px 30px;
+  }
+  .btn-bot {
+    width: 65vw;
+  }
+
+  .terapia-content-bot-1 h2,
+  .terapia-content-bot-2 h2 {
+    font-size: 4.5vw;
+  }
+
+  .terapia-content-bot-1 p,
+  .terapia-content-bot-1 p span,
+  .terapia-content-bot-2 p,
+  .terapia-content-bot-2 p span,
+  .terapia-footer {
+    font-size: 3.5vw;
   }
 }
 @media (min-width: 600px) and (max-width: 899px) {
   .terapia-banner h2 {
-    top: 10vh;
+    top: 50vh;
+    padding: 2vw;
   }
   .terapia-passos {
     margin: 0 5vw;
@@ -157,13 +206,12 @@
   .terapia-passos img {
     max-width: 25vw;
   }
-
-  .terapia-button{
-    width: 60vw;
+  .terapia-button {
+    width: 52vw;
   }
 
-  .terapia-button p{
-    font-size: 1.3rem;
+  .terapia-button p {
+    font-size: 2.5vw;
   }
 }
 @media (min-width: 900px) and (max-width: 1199px) {

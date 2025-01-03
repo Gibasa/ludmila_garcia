@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 50px;
+  gap: 5vw;
   padding-bottom: 50px;
 }
 
@@ -16,16 +16,15 @@
   font-weight: 600;
   font-style: italic;
   margin-bottom: 10vh;
+  line-height: 4vw;
 }
 .contato-btn {
   background-color: #8900fc;
-  height: 8vh;
-  width: 30vw;
   border-radius: 50px;
   color: white;
   text-align: center;
-  padding: 10px;
-  font-size: 1.7vw;
+  padding: 6px 25px;
+  font-size: 1.4vw;
   font-weight: 500;
   align-self: flex-start;
   text-decoration: none;
@@ -38,4 +37,47 @@
 
 .contato-fotos img{
     width: 40vw;
+}
+
+@media (max-width: 599px) {
+  .contato {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contato-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60vw;
+  }
+  .contato-text h2 {
+    margin: 0 0 5vw 0;
+    text-align: center;
+    font-size: 4.5vw;
+  }
+  .contato-btn{
+    align-self: center;
+    font-size: 3vw;
+  }
+  .contato-fotos img{
+    width: 80vw;
+  }
+}
+
+
+@media (min-width: 600px) and (max-width: 899px) {
+  .contato-btn{
+    align-self: center;
+
+  }
+  .contato-text h2 {
+    margin: 0 0 5vw 0;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1199px) {
+  
 }

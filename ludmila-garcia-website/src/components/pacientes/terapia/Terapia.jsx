@@ -4,50 +4,53 @@ import { Link } from "react-router-dom";
 function Terapia() {
   return (
     <div className="terapia">
-      <div className="terapia-banner">
-        <h2>Como funciona o meu modelo de terapia?</h2>
-        <img alt="banner-img" />
-      </div>
-      <div className="terapia-content-top">
-        <p>
-          Acredito que a terapia online é uma ferramenta poderosa para promover
-          mudanças positivas na vida das pessoas, oferecendo flexibilidade,
-          acessibilidade e um ambiente seguro e acolhedor para o seu
-          desenvolvimento pessoal.
-        </p>
-        <p>
-          Sou psicóloga clínica com vasta experiência em terapia
-          cognitivo-comportamental (TCC), uma abordagem terapêutica focada em
-          identificar e modificarpensamentos e comportamentos que contribuem
-          para o sofrimento emocional. Através de técnicas específicas, você
-          aprenderá a lidar com pensamentos distorcidos, gerenciar suas emoções
-          e desenvolver habilidades para enfrentar os desafios da vida.
-        </p>
-      </div>
+      <div className="terapia-bg">
+        <div className="terapia-banner">
+          <h2>Como funciona o meu modelo de terapia?</h2>
+          <img alt="banner-img" />
+        </div>
+        <div className="terapia-content-top">
+          <p>
+            Acredito que a terapia on-line é uma ferramenta poderosa para
+            promover mudanças positivas na vida das pessoas, oferecendo
+            flexibilidade, acessibilidade e um ambiente seguro e acolhedor para
+            o seu desenvolvimento pessoal.
+          </p>
+          <p>
+            Sou psicóloga clínica com vasta experiência em terapia
+            cognitivo-comportamental (TCC), uma abordagem terapêutica focada em
+            identificar e modificarpensamentos e comportamentos que contribuem
+            para o sofrimento emocional. Através de técnicas específicas, você
+            aprenderá a lidar com pensamentos distorcidos, gerenciar suas
+            emoções e desenvolver habilidades para enfrentar os desafios da
+            vida.
+          </p>
+        </div>
+        <div className="terapia-passos-button">
+          <div className="terapia-passos">
+            <img src="./images/PASSO 1.png" alt="passo1" />
+            <img src="./images/PASSO 2.png" alt="passo2" />
+            <img src="./images/PASSO 3.png" alt="passo3" />
+          </div>
 
-      <div className="terapia-passos">
-        <img src="./images/PASSO 1.png" alt="passo1" />
-        <img src="./images/PASSO 2.png" alt="passo2" />
-        <img src="./images/PASSO 3.png" alt="passo3" />
-      </div>
-
-      <Link
-        to="https://api.whatsapp.com/send?phone=557192024225&text=Ol%C3%A1,%20vim%20do%20seu%20site"
-        target="_blank"
-        className="terapia-button"
-      >
-        <p>QUERO SABER MAIS DETALHES</p>
-      </Link>
+          <Link
+            to="https://api.whatsapp.com/send?phone=557192024225&text=Ol%C3%A1,%20vim%20do%20seu%20site"
+            target="_blank"
+            className="terapia-button"
+          >
+            <p>QUERO SABER MAIS DETALHES</p>
+          </Link>
+        </div>
       <div className="terapia-content-bot">
         <div className="terapia-content-bot-1">
-          <h2>Benefícios da terapia online:</h2>
+          <h2>Benefícios da terapia on-line:</h2>
           <p>
             <span>Flexibilidade:</span> Você pode agendar e reagendar suas
             sessões de acordo com sua disponibilidade, sem precisar se deslocar
             para um consultório.
           </p>
           <p>
-            <span>Acessibilidade:</span> A terapia online é mais acessível do
+            <span>Acessibilidade:</span> A terapia on-line é mais acessível do
             que a terapia presencial, pois não há custos com transporte ou
             estacionamento.
           </p>
@@ -56,7 +59,7 @@ function Terapia() {
             sua casa, em um ambiente familiar e acolhedor.
           </p>
           <p>
-            <span>Eficácia:</span> A terapia online é tão eficaz quanto a
+            <span>Eficácia:</span> A terapia on-line é tão eficaz quanto a
             terapia presencial para diversos transtornos psicológicos.
           </p>
         </div>
@@ -90,7 +93,7 @@ function Terapia() {
       </div>
       <div className="terapia-footer">
         <p>
-          VALE LEMBRAR: As sessões de terapia online são realizadas através de
+          VALE LEMBRAR: As sessões de terapia on-line são realizadas através de
           videochamadas em plataformas seguras e confiáveis. Você pode ter
           acesso à terapia de qualquer lugar com acesso a internet, no conforto
           da sua casa ou trabalho.
@@ -99,10 +102,11 @@ function Terapia() {
       <Link
         to="https://api.whatsapp.com/send?phone=557192024225&text=Ol%C3%A1,%20vim%20do%20seu%20site"
         target="_blank"
-        className="terapia-button"
-      >
-        <p>QUERO MARCAR MINHA REUNIÃO</p>
+        className="terapia-button btn-bot"
+        >
+        <p>QUERO MARCAR MINHA SESSÃO</p>
       </Link>
+        </div>
     </div>
   );
 }

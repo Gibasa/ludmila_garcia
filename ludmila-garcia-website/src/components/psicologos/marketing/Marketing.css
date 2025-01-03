@@ -3,6 +3,7 @@
   width: 100%;
   height: 100%;
   padding-bottom: 50px;
+  padding-top: 8vw;
 }
 
 .marketing-top {
@@ -12,7 +13,7 @@
 
 .marketing-top h2 {
   font-style: italic;
-  font-size: 2.5rem;
+  font-size: 3vw;
   font-weight: 600;
   padding-bottom: 30px;
 }
@@ -44,6 +45,10 @@
   font-weight: 600;
 }
 
+.marketing-cronograma-modulo p {
+  margin: 0;
+}
+
 .marketing-bot {
   display: flex;
   flex-direction: column;
@@ -53,7 +58,7 @@
 
 .marketing-bot h2 {
   color: white;
-  font-size: 2.5rem;
+  font-size: 3vw;
   font-style: italic;
   font-weight: 600;
   margin-top: 100px;
@@ -69,14 +74,15 @@
 
 .marketing-bot-box p {
   font-size: 1.5rem;
+  line-height: 25px;
 }
 
 .marketing-btn {
   background-color: #117eff;
-  width: 30vw;
   height: 7vh;
   color: white;
   border-radius: 30px;
+  padding: 6px 25px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -89,14 +95,14 @@
 }
 
 .marketing-btn p {
-  margin: 7px;
-  font-size: 1.5vw;
+  margin: 0px;
+  font-size: 1.4vw;
 }
 
 .marketing-bot-logo {
   display: flex;
   padding: 0 10vw;
-  margin-top: 50px;
+  margin-top: 5vw;
   gap: 5vw;
 }
 
@@ -105,6 +111,7 @@
   font-style: italic;
   font-weight: 600;
   color: white;
+  width: 53%;
 }
 .marketing-bot-logo img {
   content: url("/images/LOGO PSI ALTA PER.png");
@@ -116,7 +123,7 @@
   justify-content: center;
   align-items: center;
   gap: 30px;
-  margin-top: 8vw;
+  margin-top: 5vw;
 }
 
 .marketing-bot-fotos img {
@@ -140,15 +147,15 @@
 
 .marketing-bot-btn {
   background-color: #117eff;
-  width: 40vw;
-  height: 7vh;
   color: white;
+  padding: 6px 25px;
   border-radius: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 50px auto 0;
+  margin: 50px auto;
   text-decoration: none;
+  width: 34vw;
 }
 
 .marketing-bot-btn:hover {
@@ -157,48 +164,109 @@
 }
 
 .marketing-bot-btn p {
-  margin: 7px;
-  font-size: 1.6vw;
+  margin: 0px;
+  font-size: 1.4vw;
+}
+
+.marketing-over-btn {
+  display: flex;
+  justify-content: center;
+}
+
+.marketing-over-btn p {
+  font-size: 1.7vw;
+  width: 70%;
+  color: white;
+  text-align: center;
+  margin-top: 2vw;
 }
 
 @media (max-width: 599px) {
+  .marketing-top h2 {
+    font-size: 4.5vw;
+    margin-bottom: 20px;
+    padding: 0;
+  }
+  .marketing-top p {
+    font-size: 3.5vw;
+  }
+
+  .marketing-cronograma h2 {
+    font-size: 4.5vw;
+  }
+
+  .marketing-cronograma-modulo h3 {
+    font-size: 4.5vw;
+  }
+
+  .marketing-cronograma-modulo p {
+    font-size: 3.5vw;
+  }
+
   .marketing-btn {
     width: 70vw;
+    margin-top: 10vw;
   }
 
   .marketing-btn p {
     font-size: 3vw;
   }
 
+  .marketing-bot h2 {
+    font-size: 4.5vw;
+  }
+
+  .marketing-bot-box p {
+    font-size: 3.5vw;
+  }
+
   .marketing-bot-logo {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 0;
   }
 
   .marketing-bot-logo img {
+    content: url("/images/psi de alta branco.png");
     width: 60vw;
   }
 
   .marketing-bot-logo h2 {
-    font-size: 4vw;
+    font-size: 4.5vw;
     text-align: center;
+    width: 80%;
   }
 
   .marketing-bot-fotos img {
     width: 25vw;
   }
 
-  .marketing-bot-fotos-banner p {
-    font-size: 2.5vw;
+  .marketing-bot-fotos-banner{
+    width: 80%;
+    height: 6vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-  
+
+  .marketing-bot-fotos-banner p {
+    font-size: 2.8vw;
+  }
+
   .marketing-bot-btn {
-    width: 60vw;
+    width: 80vw;
+    margin-top: 5vw;
   }
 
   .marketing-bot-btn p {
-    font-size: 2.5vw;
+    font-size: 3vw;
+    text-align: center;
+  }
+
+  .marketing-over-btn p {
+    font-size: 3vw;
+    width: 90%;
   }
 }
 @media (min-width: 600px) and (max-width: 899px) {
@@ -217,6 +285,10 @@
   .marketing-bot-btn p {
     font-size: 2.5vw;
   }
+
+  .marketing-bot-logo img {
+    content: url("/images/psi de alta branco.png");
+  }
 }
 
 @media (min-width: 900px) and (max-width: 1199px) {
@@ -226,5 +298,13 @@
 
   .marketing-btn p {
     font-size: 2.2vw;
+  }
+
+  .marketing-bot-btn {
+    width: 65vw;
+  }
+
+  .marketing-bot-btn p {
+    font-size: 2.5vw;
   }
 }

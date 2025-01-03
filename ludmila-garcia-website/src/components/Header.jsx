@@ -5,6 +5,7 @@ import Navbar from "react-bootstrap/Navbar";
 import { Link, useNavigate } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import { Dropdown } from "react-bootstrap";
+
 import "./Header.css";
 
 function Header() {
@@ -16,7 +17,6 @@ function Header() {
   const location = useLocation();
   const currentPath = location.pathname;
   const navigate = useNavigate();
-
 
   useEffect(() => {
     const handleScroll = () => {
@@ -63,7 +63,6 @@ function Header() {
   };
 
   function scrollToSection(sectionId, delay = 100) {
-  
     return new Promise((resolve) => {
       navigate("/");
       setTimeout(() => {
@@ -80,7 +79,12 @@ function Header() {
   }
 
   return (
-    <Navbar expand="lg" className={`header-bg ${scrolled ? "scrolled" : ""}`}>
+    <Navbar
+      collapseOnSelect
+      expand="lg"
+      className={`header-bg ${scrolled ? "scrolled" : ""}`}
+      expanded={expanded}
+    >
       <Container className="header-container">
         <Navbar.Brand className="header-logo order-lg-first" as={Link} to="/">
           <img
@@ -90,18 +94,19 @@ function Header() {
           />
         </Navbar.Brand>
         <Navbar.Toggle
-          aria-controls="basic-navbar-nav"
+          aria-controls="responsive-navbar-nav"
           className="header-toggle"
           onClick={handleNavToggle}
         />
-        <Navbar.Collapse id="basic-navbar-nav" in={expanded}>
-          <Nav className="mx-auto header-links">
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav className="me-auto header-links">
             <Nav.Link
-              className={`header-link header-apresentacao ${
-                currentPath === "/apresentacao" ? "active" : ""
-              }`}
+              className={`header-link header-apresentacao `}
               to="/"
-              onClick={() => scrollToSection("apresentacao")}
+              onClick={() => {
+                scrollToSection("apresentacao");
+                handleNavItemClick();
+              }}
             >
               <p>APRESENTAÇÃO</p>
             </Nav.Link>
@@ -110,14 +115,30 @@ function Header() {
               onMouseLeave={handlePacientesHoverLeave}
               show={isPacientesDropdownOpen}
             >
-              <Dropdown.Toggle as={Link} to="#" className="header-pacientes header-dropdown-toggle">
+              <Dropdown.Toggle
+                as={Link}
+                to="#"
+                className="header-pacientes header-dropdown-toggle"
+              >
                 PARA PACIENTES
               </Dropdown.Toggle>
               <Dropdown.Menu>
-                <Dropdown.Item as={Link} to="/terapia">
+                <Dropdown.Item
+                  as={Link}
+                  to="/terapia"
+                  onClick={() => {
+                    handleNavItemClick();
+                  }}
+                >
                   TERAPIA
                 </Dropdown.Item>
-                <Dropdown.Item as={Link} to="/pensemagro">
+                <Dropdown.Item
+                  as={Link}
+                  to="/pensemagro"
+                  onClick={() => {
+                    handleNavItemClick();
+                  }}
+                >
                   PENSE MAGRO
                 </Dropdown.Item>
               </Dropdown.Menu>
@@ -127,23 +148,37 @@ function Header() {
               onMouseLeave={handlePsicologosHoverLeave}
               show={isPsicologosDropdownOpen}
             >
-              <Dropdown.Toggle as={Link} to="#" className="header-psicologos header-dropdown-toggle">
+              <Dropdown.Toggle
+                as={Link}
+                to="#"
+                className="header-psicologos header-dropdown-toggle"
+              >
                 PARA PSICÓLOGOS
               </Dropdown.Toggle>
               <Dropdown.Menu>
-                <Dropdown.Item as={Link} to="/marketing">
+                <Dropdown.Item
+                  as={Link}
+                  to="/marketing"
+                  onClick={() => {
+                    handleNavItemClick();
+                  }}
+                >
                   MARKETING PARA PSIS
                 </Dropdown.Item>
-                <Dropdown.Item as={Link} to="/compulsao">
+                <Dropdown.Item
+                  as={Link}
+                  to="/compulsao"
+                  onClick={() => {
+                    handleNavItemClick();
+                  }}
+                >
                   NEUROCIÊNCIA DA COMPULSÃO ALIMENTAR
                 </Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
             <Nav.Link
               as={Link}
-              className={`header-link header-contato ${
-                currentPath === "/contato" ? "active" : ""
-              }`}
+              className={`header-link header-contato`}
               to="/contato"
               onClick={handleNavItemClick}
             >

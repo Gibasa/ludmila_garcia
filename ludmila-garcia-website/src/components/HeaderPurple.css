@@ -9,12 +9,13 @@
   background-color: #8900fc;
 }
 
-.header-container.container {
+.header-container-p.container {
   gap: 2vw;
   margin: 0;
   padding: 0;
   top: 0;
   display: flex;
+  background-color: #8900fc;
 }
 
 .header-link-p {
@@ -23,6 +24,7 @@
   justify-content: center;
   padding: 8px;
   position: relative;
+  margin: 0 10px;
 }
 
 .header-link-p,
@@ -124,15 +126,106 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 5px;
+  margin: 0 17px;
 }
 
 .header-dropdown-toggle::after {
   display: none !important;
 }
 
+.header-bg-p .navbar-toggler{
+  color: white;
+  border: 1.5px groove white;
+}
+
+.navbar-toggler-icon{
+  color: white !important;
+}
+
 @media (max-width: 991px) {
-  .header-container {
+
+  .header-bg-p {
+    height: 20vw;
+    padding: 0;
+  }
+  .header-container-p {
     gap: 0vw;
+    display: flex;
+  }
+
+  .header-bg-p .show p,
+  .header-bg-p .show .header-pacientes-p,
+  .header-bg-p .show .header-psicologos-p,
+  .header-bg-p .show .header-link-p {
+    background-color: #8900fc;
+    color: white;
+    font-size: 3.5vw;
+    margin: 0 15px 0 0;
+    padding: 0;
+    display: flex;
+    justify-self: flex-end;
+    align-self: flex-end;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+
+  .header-pacientes-toggle-p,
+  .header-psicologos-toggle-p {
+    background-color: #8900fc;
+    color: white;
+    font-size: 3.5vw;
+    margin: 0;
+    padding: 0;
+  }
+  .header-psicologos-p,
+  .header-pacientes-p {
+    background-color: #8900fc;
+    color: white;
+    font-size: 3.5vw;    
+  }
+
+  .header-apresentacao-p,
+  .header-contato-p {
+    justify-self: flex-end !important;
+    align-self: flex-end !important;
+  }
+
+  .header-link-p p {
+    background-color: #8900fc;
+    color: white;
+    font-size: 3.5vw;
+    display: flex;
+    justify-self: flex-end;
+    align-self: flex-end;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+
+  .show .dropdown-p {
+    display: flex;
+    flex-direction: column;;
+  }
+  .show .dropdown-menu-p {
+    border: none;
+    background-color: #8900fc;
+  }
+
+  .show .dropdown-item-p {
+    color: black;
+    font-size: 3vw;
+    text-align: right;    
+  }
+
+  .header-logo-p img {
+    height: 20vw;
+  }
+
+  .navbar-nav,
+  .nav-link-p {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding-bottom: 10px;
   }
 }
+

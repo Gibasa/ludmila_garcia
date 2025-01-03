@@ -3,25 +3,25 @@
   align-items: center;
   padding: 10px;
   width: 100%;
-  height: 200px;
+  height: 210px;
   z-index: 5;
   top: 0;
 }
 
 .header-container.container {
-  gap: 2vw;
   margin: 0;
   padding: 0;
   top: 0;
   display: flex;
+  background-color: white;
 }
 
 .header-link {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1vw;
   position: relative;
+  margin: 0 10px;
 }
 
 .header-link,
@@ -39,20 +39,15 @@
   height: 40px;
   padding: 6px 25px;
   border-radius: 50px;
-  font-size: 1.3vw;
+  font-size: 1.4vw;
   white-space: nowrap;
-  transition: 0.5s ease;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.header-link p:hover {
-  background-color: #117eff;
-}
-
-
-.header-apresentacao, .header-contato{
+.header-apresentacao,
+.header-contato {
   justify-self: center;
   align-self: center;
   transition: 0.5s ease;
@@ -77,29 +72,14 @@
   background-color: #8900fc;
   padding: 6px 25px;
   border-radius: 50px;
-  font-size: 1.3vw;
+  font-size: 1.4vw;
   white-space: nowrap;
-  transition: 0.5s ease;
   text-decoration: none;
-}
-
-
-
-.header-bg.scrolled .header-link {
-  color: #047060;
-}
-
-.navbar-nav .header-link.active p{
-  background-color: #117eff;
-}
-
-.header-toggle {
-  color: #5de280;
 }
 
 .header-logo img {
   content: url("/images/itens lud.png");
-  height: 120px;
+  height: 9vw;
   background-size: contain;
 }
 
@@ -112,12 +92,6 @@
   border-radius: 50px;
   font-size: 1.2rem;
   white-space: nowrap;
-  transition: 0.5s ease;
-}
-
-.header-pacientes-toggle:hover,
-.header-psicologos-toggle:hover {
-  background-color: #117eff;
 }
 
 .header-dropdown-menu {
@@ -128,26 +102,112 @@
   color: white;
   padding: 6px 25px;
   font-size: 1.2rem;
-  transition: 0.5s ease;
 }
 
-.header-dropdown-menu .dropdown-item:hover {
-  background-color: #117eff;
-}
-
-.dropdown{
+.dropdown {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 5px;
+  margin: 0 17px;
 }
+
+.dropdown-menu {
+  margin-top: -5px !important;
+}
+
 
 .header-dropdown-toggle::after {
   display: none !important;
 }
 
+.navbar-toggler {
+  margin-right: 60px;
+}
+
 @media (max-width: 991px) {
+
+  .header-bg {
+    height: 150px;
+  }
   .header-container {
     gap: 0vw;
+    display: flex;
+  }
+
+  .header-bg .show p,
+  .header-bg .show .header-pacientes,
+  .header-bg .show .header-psicologos,
+  .header-bg .show .header-link {
+    background-color: white;
+    color: #8900fc;
+    font-size: 3.5vw;
+    margin: 0 15px 0 0;
+    padding: 0;
+    display: flex;
+    justify-self: flex-end;
+    align-self: flex-end;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+
+  .header-pacientes-toggle,
+  .header-psicologos-toggle {
+    background-color: white;
+    color: #8900fc;
+    font-size: 3.5vw;
+    margin: 0;
+    padding: 0;
+  }
+  .header-psicologos,
+  .header-pacientes {
+    background-color: white;
+    color: #8900fc;
+    font-size: 3.5vw;    
+  }
+
+  .header-apresentacao,
+  .header-contato {
+    justify-self: flex-end !important;
+    align-self: flex-end !important;
+    margin: 0;
+  }
+
+  .header-link p {
+    background-color: white;
+    color: #8900fc;
+    font-size: 3.5vw;
+    margin-right: 17px;
+    display: flex;
+    justify-self: flex-end;
+    align-self: flex-end;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+
+  .show .dropdown {
+    display: flex;
+    flex-direction: column;
+  }
+  .show .dropdown-menu {
+    border: none;
+  }
+
+  .show .dropdown-item {
+    color: black;
+    font-size: 3vw;
+    text-align: right;
+    
+  }
+
+  .header-logo img {
+    height: 20vw;
+  }
+
+  .navbar-nav,
+  .nav-link {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding-bottom: 10px;
   }
 }

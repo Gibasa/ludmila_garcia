@@ -7,7 +7,7 @@ import { useLocation } from "react-router-dom";
 import { Dropdown } from "react-bootstrap";
 import "./HeaderPurple.css";
 
-function Header() {
+function HeaderPurple() {
   const [scrolled, setScrolled] = useState(false);
   const [expanded, setExpanded] = useState(false);
   const [isPacientesDropdownOpen, setIsPacientesDropdownOpen] = useState(false);
@@ -80,8 +80,8 @@ function Header() {
   }
 
   return (
-    <Navbar expand="lg" className={`header-bg-p ${scrolled ? "scrolled" : ""}`}>
-      <Container className="header-container">
+    <Navbar data-bs-theme="dark" expand="lg" className={`header-bg-p ${scrolled ? "scrolled" : ""}`}>
+      <Container className="header-container-p">
         <Navbar.Brand className="header-logo-p order-lg-first" as={Link} to="/">
           <img
             height="80"
@@ -113,7 +113,7 @@ function Header() {
               <Dropdown.Toggle as={Link} to="#" className="header-pacientes-p header-dropdown-toggle">
                 PARA PACIENTES
               </Dropdown.Toggle>
-              <Dropdown.Menu>
+              <Dropdown.Menu className="dropdown-menu-p">
                 <Dropdown.Item as={Link} to="/terapia">
                   TERAPIA
                 </Dropdown.Item>
@@ -130,7 +130,7 @@ function Header() {
               <Dropdown.Toggle as={Link} to="#" className="header-psicologos-p header-dropdown-toggle">
                 PARA PSICÓLOGOS
               </Dropdown.Toggle>
-              <Dropdown.Menu>
+              <Dropdown.Menu className="dropdown-menu-p">
                 <Dropdown.Item as={Link} to="/marketing">
                   MARKETING PARA PSIS
                 </Dropdown.Item>
@@ -156,4 +156,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default HeaderPurple;

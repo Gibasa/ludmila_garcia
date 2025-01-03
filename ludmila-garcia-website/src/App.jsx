@@ -16,6 +16,7 @@ import PenseMagro from "./components/pacientes/pensemagro/PenseMagro";
 import Marketing from "./components/psicologos/marketing/Marketing";
 import Compulsao from "./components/psicologos/compulsao/Compulsao";
 import Contato from "./components/contato/Contato";
+import Cookie from "./components/Cookie/Cookie";
 
 function App() {
   function HeaderContainer() {
@@ -41,6 +42,8 @@ function App() {
         <Route path="/compulsao" element={<Compulsao />}></Route>
         <Route path="/contato" element={<Contato />}></Route>
       </Routes>
+      <Cookie/>
+
       <FooterContainer />
     </Router>
   );

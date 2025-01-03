@@ -1,41 +1,40 @@
 .home {
-  display: flex;
-  background-image: url("/images/FUNDO TELA 1.png");
-  background-size: contain;
-  background-repeat: no-repeat;
+  display: flex;  
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-desktop-bg{
+  background-image: url("/images/asa com texto 2.png");
+  background-size: 90% auto;
+  background-repeat: no-repeat;
+}
+
+.home-mobile-bg{
+  background-image: url("/images/asa com texto.png");
+  background-size: 90% auto;
+  background-repeat: no-repeat;
+  background-position:top;
 }
 
 .home-content {
   display: flex;
-  align-items: flex-start;
-  padding: 0 8vw 5vw 15vw;
-  margin-top: 50px;
-}
-
-.home-content h1 {
-  margin-top: 7.5vh;
-  color: white;
-  font-weight: 600;
-  font-style: italic;
-  font-size: 3rem;
-  width: 100%;
-  line-height: 60px;
-  margin-bottom: 16vh;
+  gap: 15vw;
+  margin-left: 10vw;
 }
 
 .home-btn {
   background-color: #8900FC;
-  height: 8vh;
-  width: 30vw;
   border-radius: 50px;
   color: white;
   text-align: center;
-  padding: 10px;
-  font-size: 1.5rem;
+  padding: 6px 25px;
+  font-size: 1.4vw;
   font-weight: 500;
   align-self:flex-start;
   text-decoration: none;
+  margin-top: 23.8vw;
 }
 
 .home-btn:hover{
@@ -44,13 +43,28 @@
 }
 
 .home-img img {
-  max-height: 35vw;
-  margin-right: 6vw;
+  max-height: 32vw;
   content: url("/images/GRADE DE FOTO TELA 1.png");
 }
 
-@media (max-width: 599px) {}
-@media (min-width: 600px) and (max-width: 899px) {}
-@media (min-width: 900px) and (max-width: 1250px) {
-  
+@media (max-width: 990px) {
+  .home-content{
+    flex-direction: column-reverse;
+    gap: 0;
+    margin: 23vw 0 0 0;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .home-btn{
+    margin: 5vw 0;
+    align-self: center;
+    font-size: 3vw;
+  }
+
+  .home-img img{
+    max-height: 60vw;
+    margin-top: 10vw;
+  }
 }
+

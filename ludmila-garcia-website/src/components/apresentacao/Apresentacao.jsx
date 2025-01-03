@@ -3,7 +3,7 @@ import "./Apresentacao.css";
 function Apresentacao() {
   return (
     <div className="apresentacao" id="apresentacao">
-      <img alt="apresentacao" />
+      <img alt="apresentacao" className="apresentacao-img" />
       <div className="apresentacao-text">
         <h2>Olá, sou Ludmila Garcia</h2>
         <p>
@@ -18,10 +18,19 @@ function Apresentacao() {
           e familiares, Doenças Crônicas e transtornos alimentares, obesidade,
           tem atuação em psicologia na atenção básica da saúde.
         </p>
+        <p>
+          Pioneira no atendimento psicológico on-line desde 2016, acredito que a
+          terapia on-line é uma ferramenta poderosa para promover mudanças
+          positivas na vida das pessoas, oferecendo flexibilidade,
+          acessibilidade e um ambiente seguro e acolhedor para o seu
+          desenvolvimento pessoal.
+        </p>
         <div className="apresentacao-points">
           <p>
-            <span className="apresentacao-point">•</span> Atualmente moro em
-            Lucerna na Suíça e atuo 100% Online.
+            <span className="apresentacao-point">•</span> Desde 2016 atuo na
+            psicologia de forma 100% on-line, com passagens por Lisboa -
+            Portugal, Luzern - Suíça, Bourdeaux - França e atualmente vivendo em
+            Madrid - Espanha.
           </p>
           <p>
             <span className="apresentacao-point">•</span> Desenvolvi o Projeto
@@ -30,9 +39,9 @@ function Apresentacao() {
             auxiliar no emagrecimento sem dietas e nos transtornos alimentares.
           </p>
           <p>
-            <span className="apresentacao-point">•</span> Ministro o curso on-line
-            Neurociência Emagrecimento da Compulsão Alimentar e Obesidade para
-            Psicólogos.
+            <span className="apresentacao-point">•</span> Ministro o curso
+            on-line Neurociência Emagrecimento da Compulsão Alimentar e
+            Obesidade para Psicólogos.
           </p>
           <p>
             <span className="apresentacao-point">•</span> Líder do Grupo de

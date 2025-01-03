@@ -24,6 +24,10 @@ function FooterPurple() {
           <p>Ludmila Garcia</p>
         </a>
       </div>
+      <div className="footer-p-contact">
+        <p>Avenida Felix Mendonça 401, Itabuna, Bahia, Brasil</p>
+        <p>CEP 45605-351 | Tel: +55 71 99202-4225</p>
+      </div>
       <div className="footer-p-copyright">
         <p>
           Todos os direitos reservados a Ludmila Garcia. Copyright {yearnow()}

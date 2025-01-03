@@ -1,37 +1,42 @@
 .compulsao {
-  background-image: linear-gradient(to bottom, #8900fc, #117eff);
   height: 100%;
+  background-color: #117eff;
 }
 .compulsao-top {
+  background-image: linear-gradient(to bottom, #8900fc, #117eff);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  padding: 5vw 4vw;
+  align-items:flex-start;
+  padding: 0vw 8vw 0 8vw;
 }
 
 .compulsao-top h2 {
   color: white;
-  font-size: 2.5rem;
+  font-size: 3vw;
   font-style: italic;
   font-weight: 600;
   margin-bottom: 50px;
-  text-align: center;
+  margin-top: 10vw;
 }
 
 .compulsao-top p {
   color: white;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   text-align: start;
-  width: 80%;
+  text-align: justify;
+  font-weight: 600;
 }
 .compulsao-bot {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  height: 100%;
+  padding-top: 5vw;
 }
 
 .compulsao-bot img {
+  content: url("/images/lud site.png");
   max-width: 100%;
   margin: 0;
 }
@@ -44,37 +49,99 @@
 }
 
 .compulsao-bot h2 {
-  font-size: 2.5vw;
+  font-size: 3vw;
   font-style: italic;
   font-weight: 600;
   width: 40%;
-  margin-left: 150px;
+  margin-left: 10vw;
   margin-bottom: 20vw;
+  padding-bottom: 10vw;
 }
 
 .compulsao-bot p {
-  font-size: 2vw;
+  font-size: 1.5vw;
   font-style: italic;
   width: 30%;
-  margin: 100px 150px;
-  line-height: 2.5vw;
+  margin: 6vw 10vw 10vw;
+  line-height: 2vw;
 }
 
 .compulsao-bot-btn {
   background-color: #8900fc;
-  width: 40vw;
-  height: 7vh;
+  width: 30vw;
+  height: 5vw;
   color: white;
   border-radius: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 700px auto 0;
+  margin: 15vw auto 0 10vw;
   position: absolute;
+
+}
+
+.compulsao-bot-btn:hover{
+  background-color:white;
+  color: #117eff;
+}
+
+.link-hover:hover p {
+  color: #117eff;
 }
 
 .compulsao-bot-btn p {
   margin: 0;
-  font-size: 1.5rem;
+  font-size: 1.4vw;
   padding: 0;
+  width: 100%;
+  text-align: center;
+  font-style: normal;
+  line-height: 1.8vw;
+}
+
+@media (max-width: 599px) {
+ .compulsao-top h2{
+  font-size: 4.5vw;
+  padding: 0;
+  margin-bottom: 10px;
+ }
+ .compulsao-top p{
+  font-size: 3.5vw;
+ }
+ 
+ .compulsao-bot img{
+  padding: 20vw 0;
+ }
+
+ .compulsao-bot h2{
+  font-size: 4.5vw;
+  width: 80%;
+  margin: 0 11vw 50vw;
+  text-align: center;
+ }
+ .compulsao-bot p{
+  font-size: 3.5vw;
+  width: 43%;
+  line-height: 3vw;
+  margin-top: 10vw;
+ }
+
+ .compulsao-bot-btn{
+  width: 80vw;
+  height: 10vw;
+  margin-top: 55vw;
+ }
+ .compulsao-bot-btn p{
+  font-size: 3vw;
+  line-height: 3vw;
+  padding: 0;
+  margin: 0;
+  width: 80%;
+ }
+}
+
+@media (min-width: 600px) and (max-width: 899px) {}
+
+@media (min-width: 900px) and (max-width: 1199px) {
+  
 }

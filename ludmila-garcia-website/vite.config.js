@@ -1,12 +1,17 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import compression from "vite-plugin-compression";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
-  base:"https://gibasa.github.io/ludmila_garcia/",
+  plugins: [
+    react(),
+    compression({ algorithm: "gzip" }), 
+    compression({ algorithm: "brotliCompress" }), 
+  ],
+  base: "/",
   esbuild: {
-    loader: 'jsx',
+    loader: "jsx",
   },
-  assetsInclude:['**/*.png', '**/*.jpg', '**/*.svg']
-})
+  assetsInclude: ["**/*.png", "**/*.jpg", "**/*.svg"],
+});

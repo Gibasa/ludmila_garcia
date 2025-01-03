@@ -6,13 +6,13 @@
   padding-bottom: 50px;
 }
 .pense-magro-top {
-  margin: 10vw 10vw 0 10vw;
+  margin: 1vw 10vw 0 10vw;
 }
 
 .pense-magro-top h2 {
   color: #8900fc;
   font-style: italic;
-  font-size: 3rem;
+  font-size: 3vw;
   font-weight: 600;
 }
 
@@ -25,7 +25,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin: 100px;
+  margin: 2vw;
 }
 
 .pense-magro-balls > p:first-child {
@@ -39,7 +39,7 @@
   line-height: 27px;
   font-style: italic;
   display: flex;
-  padding: 4vw 2vw;
+  padding: 4vw 2.5vw;
   justify-content: center;
   align-items: center;
   margin-right: 4vw;
@@ -53,17 +53,19 @@
 
 .pense-magro-ball p {
   background-image: url("/images/BOLA DEGRADÊ.png");
-  background-size: cover;
-  width: 10vw;
-  height: 10vw;
-  background-color: white;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 8vw;
+  height: 8vw;
   color: black;
   font-weight: 600;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 16px;
-  font-size: 1.3vw;
+  padding: 14px;
+  font-size: 1vw;
+  line-height: 15px;
 }
 
 .pense-magro-arrow img {
@@ -78,18 +80,29 @@
 .pense-magro-top-end {
   background-color: #8900fc;
   border-radius: 20px;
-  width: 90vw;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 5px 30px;
+  padding: 6px 25px;
+  margin-bottom: 50px;
 }
 
 .pense-magro-top-end p {
   margin: 0;
   color: white;
-  font-size: 1.8rem;
+  font-size: 1.4vw;
   font-style: italic;
+}
+
+.pense-magro-bg-top {
+  background-image: url("/images/fundo degradê azul.png");
+  background-size: 100% 80%;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .pense-magro-bot {
@@ -97,21 +110,16 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 10vw;
-}
-
-.pense-magro h2 {
-  color: #8900fc;
-  font-size: 5vw;
-  font-style: italic;
-  font-weight: 600;
+  margin: 5vw 6vw 6vw 6vw;
+  width: 100%;
+  padding-bottom: 50px;
 }
 
 .pense-magro-bot-balls {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 100px;
+  margin: 4vw;
 }
 
 .pense-magro-bot-ball p {
@@ -127,7 +135,7 @@
   font-weight: 600;
   text-align: center;
   font-size: 5vw;
-  padding: 25px;
+  padding: 27px;
   line-height: 21px;
 }
 
@@ -138,19 +146,32 @@
   margin-bottom: 15px;
 }
 
+.pense-magro-bot h2 {
+  padding-top: 50px;
+  font-style: italic;
+  font-size: 3vw;
+  font-weight: 600;
+  color: #8900fc;
+}
+
 .pense-magro-bot p {
   font-weight: 600;
   font-size: 1.3rem;
   text-align: center;
 }
 
+.pense-magro-bot-paragrafo {
+  width: 80vw;
+}
+
 .pense-magro-bot-end {
   border: 4px solid #8900fc;
   border-radius: 80px;
-  margin-top: 50px;
+  margin: 3vw;
 }
 .pense-magro-bot-end p {
-  font-size: 2.5rem;
+  font-size: 2vw;
+  font-weight: 600;
   color: #8900fc;
   padding: 5px 20px;
   margin: 0;
@@ -170,52 +191,167 @@
   width: 30vw;
 }
 
-.swiper-button-next::after {
-  padding-left: 70px;
-  background-image: url("./images/SETA ROXA DIREITA.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  height: 6vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #8900fc;
+.swiper-custom-next,
+.swiper-custom-prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  cursor: pointer;
+  background-color: transparent;
+  z-index: 1;
+  &:hover {
+    opacity: 0.8;
+  }
 }
-.swiper-button-prev::after {
-  padding-right: 100px;
-  margin-left: 120px;
-  background-image: url("./images/SETA ROXA ESQUERDA.png");
-  background-size: contain;
-  background-repeat: no-repeat;
+
+.swiper-custom-next {
+  right: 80px;
+}
+
+.swiper-custom-prev {
+  left: 40px;
+}
+
+.swiper-custom-next img,
+.swiper-custom-prev img {
+  width: 3vw;
   height: 6vw;
-  color: #8900fc;
+}
+
+.hidden-swiper-pensemagro {
+  display: none;
+}
+
+.pense-magro .swiper-slide {
+  height: 35vw;
+}
+
+.pense-magro-bot-btn {
+  background-color: #117eff;
+  padding: 6px 25px;
+  color: white;
+  border-radius: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
+  align-self: center;
+  justify-self: center;
+  margin: 5vw 0 5vw 0;
+  text-decoration: none;
+  width: 40vw;
+  text-align: center;
+}
+
+.pense-magro-bot-btn:hover{
+background-color: #8900fc;
+}
+
+.pense-magro-bot-btn p {
+  margin: 0;
+  font-size: 1.4vw;
 }
 
 @media (max-width: 599px) {
+  .pense-magro-top h2 {
+    font-size: 4.5vw;
+  }
+
+  .pense-magro-top p {
+    font-size: 3.5vw;
+  }
   .pense-magro-balls {
     flex-direction: column;
   }
   .pense-magro-balls > p:first-child {
     width: 60vw;
-    font-size: 5vw;
-    line-height: 45px;
+    font-size: 4.5vw;
+    margin-bottom: 8vw;
+    height: 17vw;
+    text-align: center;
+    border-radius: 20px;
   }
   .pense-magro-ball p {
     width: 30vw;
     height: 30vw;
     font-size: 4vw;
+    line-height: 5vw;
   }
   .pense-magro-arrow img {
     height: 15vw;
     transform: rotate(90deg);
     margin: 10px 0;
   }
-  .swiper img {
-    width: 60vw;
+  .swiper{
+    height: 50vh;
   }
+  .swiper img {
+    width: 100vw;
+  }
+
+  .pense-magro-top-end {
+    width: 80%;
+  }
+
+  .pense-magro-top-end p {
+    font-size: 4.5vw;
+    text-align: center;
+    padding: 5px;
+  }
+
+  .pense-magro-bot {
+    margin-bottom: 0;
+  }
+  .pense-magro-bot h2 {
+    padding-top: 0;
+    font-size: 4.5vw;
+  }
+
+  .pense-magro-bot-balls {
+    flex-direction: column;
+  }
+
+  .pense-magro-line {
+    height: 6vw;
+    width: 10px;
+    margin: 0;
+  }
+
+  .pense-magro-bot-ball p {
+    margin: 0;
+    width: 30vw;
+    height: 30vw;
+    font-size: 3.5vw;
+  }
+
+  .pense-magro-bot p {
+    font-size: 3.5vw;
+  }
+
+  .pense-magro-bot-end {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 4vw;
+    width: 80%;
+    border: 2px solid #8900fc;
+  }
+
+  .pense-magro-bot-end p {
+    font-size: 4.5vw;
+    text-align: center;
+    width: 100%;
+  }
+
+  .pense-magro .swiper-slide {
+    height: 70vw;
+  }
+
+  .pense-magro-bot-btn p {
+    font-size: 3vw;
+  }
+  
 }
 @media (min-width: 600px) and (max-width: 899px) {
   .pense-magro-balls {
@@ -224,12 +360,13 @@
   .pense-magro-balls > p:first-child {
     width: 60vw;
     font-size: 5vw;
-    line-height: 45px;
+    line-height: 5vw;
   }
   .pense-magro-ball p {
     width: 30vw;
     height: 30vw;
     font-size: 4vw;
+    line-height: 5vw;
   }
   .pense-magro-arrow img {
     height: 10vw;
@@ -240,19 +377,35 @@
   .pense-magro-bot-balls {
     flex-direction: column;
   }
-  .pense-magro-bot-ball p {
-    width: 30vw;
-    height: 30vw;
-    font-size: 4vw;
-    line-height: 45px;
-  }
 
   .pense-magro-line {
-    transform: rotate(90deg);
+    height: 6vw;
+    width: 10px;
+    margin: 0;
+  }
+
+  .pense-magro-bot-ball p {
+    margin: 0;
+    width: 30vw;
+    height: 30vw;
+  }
+
+  .pense-magro-bot-end p {
+    font-size: 3.1vw;
   }
 
   .swiper img {
-    width: 60vw;
+    width: 50vw;
+  }
+
+  .pense-magro .swiper-slide {
+    height: 55vw;
+  }
+
+  .pense-magro-top-end p {
+    font-size: 1.8vw;
+    text-align: center;
+    padding: 10px;
   }
 }
 @media (min-width: 900px) and (max-width: 1199px) {

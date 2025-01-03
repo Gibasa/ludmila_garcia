@@ -1,6 +1,6 @@
 import "./MarketingCarousel.css";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Navigation } from "swiper/modules";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { useState, useEffect } from "react";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -47,11 +47,11 @@ function MarketingCarousel() {
     <div className="marketing-carousel">
       <h2>Assista os relatos das minhas mentoradas:</h2>
       <Swiper
-        modules={[Navigation, Autoplay]}
+        modules={[Navigation, Autoplay, Pagination]}
         slidesPerView={isMobile || isTablet ? 1 : 2}
           navigation={isMobile ? false : true}
         pagination={{ clickable: true }}
-        autoplay={{ delay: 20000 }}
+        autoplay={{ delay: 5000 }}
         loop={true}
       >
         {videos.map((n) => (
