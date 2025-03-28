@@ -1,0 +1,23 @@
+.lp-button {
+  padding: 1.2vw;
+  color: white;
+  border: none;
+  border-radius: 40px;
+  font-size: 2vw;
+  margin: 50px 0;
+}
+
+.lp-bg-purple {
+  background-color: #8900fc;
+}
+.lp-bg-purple:hover {
+  background-color: #117eff;
+}
+
+.lp-bg-blue {
+  background-color: #117eff;
+}
+
+.lp-bg-blue:hover {
+  background-color: #8900fc;
+}

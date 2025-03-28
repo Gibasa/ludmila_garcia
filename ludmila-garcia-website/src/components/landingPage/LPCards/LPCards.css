@@ -1,0 +1,25 @@
+.lp-cards-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    position: relative;
+}
+
+.lp-cards{
+    width: 25vw;
+    height: 10vw;
+    padding: 20px;
+    border-radius: 40px;
+    margin: 20px;
+    background-color: white;
+    border: 3px solid #8900fc;
+    color: #8900fc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5vw;
+    text-align: center;
+    font-weight: 600;
+    font-style: italic;
+}

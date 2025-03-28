@@ -1,11 +1,11 @@
-import "./ContatoHeader.css";
+import "./LPCards.css";
 
-function ContatoHeader() {
+function LPCards() {
   return (
-    <div className="contato-header">
+    <div className="lp-cards">
       <h2>CONTATO</h2>  
     </div>
   );
 }
 
-export default ContatoHeader;
+export default LPCards;
