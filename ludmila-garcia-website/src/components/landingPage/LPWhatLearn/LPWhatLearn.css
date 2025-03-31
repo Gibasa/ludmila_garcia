@@ -1,0 +1,44 @@
+.lp-what-learn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+    width: 100%;
+    padding: 0 5vw;
+}
+.lp-what-learn-slide {
+  display: flex;
+  flex-direction: column;
+  width: 15vw !important;
+  height: 20vw;
+  border-radius: 15px;
+  background-color: #8900fc;
+  border: 3px solid #117eff;
+  color: white;
+  justify-content: end;
+  padding: 2vw;
+  margin: 8vw 15vw;
+}
+
+.lp-what-learn-slide-container{
+    position: relative;
+    width: 100%;
+    
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: black;
+  width: 5vw;
+  height: 5vw;
+}
+
+.swiper-button-next{
+    position: absolute;
+    right: -20px;
+}
+
+.swiper-button-prev{
+    position: absolute;
+    left: -20px;
+}

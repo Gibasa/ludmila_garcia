@@ -1,0 +1,18 @@
+.lp-price{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid #8900fc;
+    border-radius: 40px;
+    padding: 20px;
+    margin: 20px 0;
+    h2{
+        color: #8900fc;
+        font-style: italic;
+        font-size: 4vw;
+    }
+    h3{
+        font-size: 2vw;
+    }
+}

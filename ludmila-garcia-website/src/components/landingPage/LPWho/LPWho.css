@@ -1,0 +1,26 @@
+.lp-who{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8vw;
+    margin: 5vw 0;
+    img{
+        width: 20vw;
+        height: auto;
+        border-radius: 20px;
+        border: 4px solid #8900fc;
+    }
+}
+
+.lp-who-text{
+    width: 20vw;
+    h2{
+        font-style: italic;
+        font-weight: 600;
+    }
+    li{
+        padding: 10px 0;
+        text-align: justify;
+        width: 90%;
+    }
+}

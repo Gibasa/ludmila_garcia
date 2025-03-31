@@ -1,0 +1,27 @@
+.lp-what-end {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 100px;
+    h2 {
+      font-size: 2.5vw;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 50px;
+      text-align: center;
+    }
+  }
+  
+  .lp-what-end-list {
+    padding-left: 20px;
+    list-style-type: disc;
+    text-align: justify;
+    max-width: 700px; 
+    margin: 0 auto;
+    li {
+      padding: 10px 0;
+      font-size: 1.5vw;
+    }
+  }
+  

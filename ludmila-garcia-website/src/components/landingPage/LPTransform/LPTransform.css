@@ -1,0 +1,27 @@
+.lp-transform {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin: 2vw 0;
+  h2 {
+    font-weight: 600;
+    font-style: italic;
+    text-align: center;
+  }
+  li{
+    text-align: justify;
+    width: 50%;
+  }
+}
+.lp-transform-card {
+  border: 3px solid #8900fc;
+  border-radius: 20px;
+  width: 60%;
+  padding: 30px;
+  text-align: left;
+  h3 {
+    font-weight: 600;
+  }
+}

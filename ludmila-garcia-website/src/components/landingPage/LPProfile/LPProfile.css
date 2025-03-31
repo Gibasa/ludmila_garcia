@@ -1,0 +1,20 @@
+.lp-profile{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h2{
+        font-style: italic;
+        font-weight: 600;
+        margin: 40px 0;
+        font-size: 3.3vw;
+    }
+    img{
+        width: 40vw;
+        border-radius: 40px;
+    }
+    p{
+        text-align: justify;
+        width: 40vw;
+    }
+}
