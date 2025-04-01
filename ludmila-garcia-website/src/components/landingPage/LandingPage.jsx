@@ -10,6 +10,7 @@ import LPWho from "./LPWho/LPWho";
 import LPTransform from "./LPTransform/LPTransform";
 import LPPrice from "./LPPrice/LPPrice";
 import LPProfile from "./LPProfile/LPProfile";
+import LPFaq from "./LPFaq/LPFaq";
 
 function LandingPage() {
   return (
@@ -48,6 +49,7 @@ function LandingPage() {
         SUA CARREIRA
       </LPButton>
       <LPProfile/>
+      <LPFaq/>
     </div>
   );
 }

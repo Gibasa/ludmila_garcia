@@ -16,3 +16,54 @@
         font-size: 2vw;
     }
 }
+@media (max-width: 1199px) {
+    .lp-price {
+      padding: 25px;
+      margin: 35px auto;
+    }
+    
+    .lp-price h2 {
+      font-size: 3rem;
+    }
+    
+    .lp-price h3 {
+      font-size: 1.6rem;
+    }
+  }
+  
+  /* Tablet pequeno (600px - 899px) */
+  @media (max-width: 899px) {
+    .lp-price {
+      padding: 20px;
+      margin: 30px auto;
+      max-width: 500px;
+      border-radius: 35px;
+    }
+    
+    .lp-price h2 {
+      font-size: 2.5rem;
+    }
+    
+    .lp-price h3 {
+      font-size: 1.4rem;
+    }
+  }
+  
+  /* Mobile (até 599px) */
+  @media (max-width: 599px) {
+    .lp-price {
+      padding: 20px 15px;
+      margin: 25px auto;
+      max-width: 90%;
+      border-radius: 30px;
+      border-width: 2px;
+    }
+    
+    .lp-price h2 {
+      font-size: 2rem;
+    }
+    
+    .lp-price h3 {
+      font-size: 1.2rem;
+    }
+  }

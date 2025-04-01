@@ -9,11 +9,16 @@
     font-weight: 600;
     font-style: italic;
     text-align: center;
+    margin-top: 20px;
   }
   li{
     text-align: justify;
-    width: 50%;
+    margin: 0 auto;
+    width: 80%;
+    padding: 10px 0;
+    font-size: 1.2vw;
   }
+  
 }
 .lp-transform-card {
   border: 3px solid #8900fc;
@@ -23,5 +28,104 @@
   text-align: left;
   h3 {
     font-weight: 600;
+  }
+}
+@media (max-width: 1199px) {
+  .lp-transform {
+    margin: 70px auto;
+    gap: 35px;
+  }
+  
+  .lp-transform h2 {
+    font-size: 2.2rem;
+  }
+  
+  .lp-transform-card {
+    width: 75%;
+    padding: 35px;
+  }
+  
+  .lp-transform li {
+    font-size: 1.2rem;
+   
+  }
+}
+
+/* Tablet pequeno (600px - 899px) */
+@media (max-width: 899px) {
+  .lp-transform {
+    margin: 60px auto;
+    padding: 0 30px;
+    gap: 30px;
+  }
+  
+  .lp-transform h2 {
+    font-size: 2rem;
+  }
+  
+  .lp-transform-card {
+    width: 85%;
+    padding: 30px;
+  }
+  
+  .lp-transform-card h3 {
+    font-size: 1.6rem;
+  }
+  
+  .lp-transform-card p:last-of-type {
+    font-size: 1.1rem;
+  }
+  
+  .lp-transform ul {
+    width: 80%;
+  }
+  
+  .lp-transform li {
+    font-size: 1.1rem;
+    padding-left: 30px;
+  }
+}
+
+/* Mobile (até 599px) */
+@media (max-width: 599px) {
+  .lp-transform {
+    margin: 50px auto;
+    padding: 0 20px;
+    gap: 25px;
+  }
+  
+  .lp-transform h2 {
+    font-size: 1.8rem;
+  }
+  
+  .lp-transform-card {
+    width: 100%;
+    padding: 25px;
+  }
+  
+  .lp-transform-card .star {
+    font-size: 1.5rem;
+  }
+  
+  .lp-transform-card h3 {
+    font-size: 1.4rem;
+  }
+  
+  .lp-transform-card p {
+    font-size: 1rem !important;
+  }
+  
+  .lp-transform ul {
+    width: 100%;
+  }
+  
+  .lp-transform li {
+    font-size: 1rem;
+    width: 80%;
+  }
+  
+  .lp-transform li::before {
+    font-size: 1.5rem;
+   
   }
 }

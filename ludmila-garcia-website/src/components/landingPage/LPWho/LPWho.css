@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 8vw;
+    gap: 10vw;
     margin: 5vw 0;
     img{
         width: 20vw;
@@ -13,7 +13,7 @@
 }
 
 .lp-who-text{
-    width: 20vw;
+    width: 30vw;
     h2{
         font-style: italic;
         font-weight: 600;
@@ -24,3 +24,82 @@
         width: 90%;
     }
 }
+
+@media (max-width: 1199px) {
+    .lp-who {
+      gap: 60px;
+      margin: 70px auto;
+    }
+    
+    .lp-who-text h2 {
+      font-size: 2.4rem;
+    }
+    
+    .lp-who-text li {
+      font-size: 1.2rem;
+    }
+    
+    .lp-who img {
+      width: 350px;
+    }
+  }
+  
+  /* Tablet pequeno (600px - 899px) */
+  @media (max-width: 899px) {
+    .lp-who {
+      flex-direction: column;
+      gap: 40px;
+      margin: 60px auto;
+      padding: 0 30px;
+      text-align: center;
+    }
+    
+    .lp-who-text {
+      width: 100%;
+      max-width: 600px;
+    }
+    
+    .lp-who-text h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+    
+    .lp-who-text h2 br {
+      display: none; /* Remove a quebra de linha em tablets */
+    }
+    
+    .lp-who-text li {
+      text-align: left;
+      font-size: 1.1rem;
+      padding: 12px 0 12px 30px;
+    }
+    
+    .lp-who img {
+      width: 300px;
+      order: -1; /* Move a imagem para cima */
+    }
+  }
+  
+  /* Mobile (até 599px) */
+  @media (max-width: 599px) {
+    .lp-who {
+      margin: 40px auto;
+      padding: 0 20px;
+      gap: 30px;
+    }
+    
+    .lp-who-text h2 {
+      font-size: 1.8rem;
+    }
+    
+    .lp-who-text li {
+      font-size: 1rem;
+      padding: 10px 0 10px 25px;
+    }
+    
+    .lp-who img {
+      width: 100%;
+      max-width: 280px;
+      border-width: 3px;
+    }
+  }

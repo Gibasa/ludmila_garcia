@@ -1,11 +1,11 @@
 .lp-button {
-  padding: 1.2vw;
+  padding: 15px 25px;
   color: white;
   border: none;
   border-radius: 40px;
   font-size: 2vw;
   margin: 50px 0;
-  line-height: 25px;
+  line-height: 30px;
 }
 
 .lp-bg-purple {
@@ -21,4 +21,32 @@
 
 .lp-bg-blue:hover {
   background-color: #8900fc;
+}
+@media (max-width: 1199px) {
+  .lp-button {
+    font-size: 1.3rem;
+    padding: 14px 22px;
+    margin: 40px 0;
+  }
+}
+
+/* Tablet pequeno (600px - 899px) */
+@media (max-width: 899px) {
+  .lp-button {
+    font-size: 1.1rem;
+    padding: 12px 20px;
+    margin: 30px 0;
+    min-width: 180px;
+  }
+}
+
+/* Mobile (até 599px) */
+@media (max-width: 599px) {
+  .lp-button {
+    font-size: 1rem;
+    padding: 10px 18px;
+    margin: 25px 0;
+    min-width: 160px;
+    border-radius: 30px;
+  }
 }

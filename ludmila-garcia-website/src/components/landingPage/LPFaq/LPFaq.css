@@ -1,0 +1,144 @@
+.lp-faq {
+  width: 100%;
+  margin: 50px 0;
+
+  h2 {
+    color: #8900fc;
+    font-size: 4vw;
+    font-weight: 600;
+    font-style: italic;
+  }
+}
+
+.lp-faq-title{
+  margin-bottom: 40px;
+}
+
+.lp-faq-accordion {
+  --bs-accordion-active-color: #000;
+  --bs-accordion-active-bg: transparent;
+  --bs-accordion-btn-focus-box-shadow: none;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.lp-faq-item {
+  border: 2px solid #8900fc !important;
+  border-radius: 8px !important;
+  overflow: hidden;
+  font-size: 1.5vw;
+  font-style: italic;
+}
+
+.accordion-button {
+  color: #000 !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  font-weight: 600;
+  font-size: 2.5vw;
+  color: #8900fc !important;
+
+  &:not(.collapsed) {
+    color: #000 !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    color: #8900fc !important;
+
+    &::after {
+      transform: rotate(-180deg);
+    }
+  }
+
+  &::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%238900fc'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e") !important;
+  }
+
+  &:focus {
+    box-shadow: none !important;
+    border-color: transparent !important;
+  }
+}
+
+.accordion-body {
+  padding: 0 20px 20px;
+}
+
+@media (max-width: 1199px) {
+  .lp-faq {
+    margin: 70px auto;
+    padding: 0 30px;
+  }
+  
+  .lp-faq h2 {
+    font-size: 2.5rem;
+  }
+  
+  .accordion-button {
+    font-size: 1.3rem;
+    padding: 18px 22px;
+  }
+  
+  .accordion-body {
+    font-size: 1rem;
+    padding: 0 22px 22px;
+  }
+}
+
+/* Tablet pequeno (600px - 899px) */
+@media (max-width: 899px) {
+  .lp-faq {
+    margin: 60px auto;
+    padding: 0 25px;
+  }
+  
+  .lp-faq h2 {
+    font-size: 2.2rem;
+  }
+  
+  .lp-faq-accordion {
+    gap: 15px;
+  }
+  
+  .accordion-button {
+    font-size: 1.2rem;
+    padding: 16px 20px;
+  }
+  
+  .accordion-body {
+    font-size: 0.95rem;
+    padding: 0 20px 20px;
+  }
+}
+
+/* Mobile (até 599px) */
+@media (max-width: 599px) {
+  .lp-faq {
+    margin: 50px auto;
+    padding: 0 20px;
+  }
+  
+  .lp-faq h2 {
+    font-size: 1.8rem;
+  }
+  
+  .lp-faq-item {
+    border-radius: 10px !important;
+  }
+  
+  .accordion-button {
+    font-size: 1.1rem;
+    padding: 14px 18px;
+  }
+  
+  .accordion-body {
+    font-size: 0.9rem;
+    padding: 0 18px 18px;
+    line-height: 1.5;
+  }
+  
+  .accordion-button::after {
+    background-size: 1rem;
+  }
+}
