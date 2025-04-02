@@ -1,69 +1,201 @@
-.lp-price{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: 3px solid #8900fc;
-    border-radius: 40px;
-    padding: 20px;
-    margin: 20px 0;
-    h2{
-        color: #8900fc;
-        font-style: italic;
-        font-size: 4vw;
-    }
-    h3{
-        font-size: 2vw;
-    }
+/* ESTILOS BASE (DESKTOP) */
+.lp-price {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  margin: 100px auto;
+  max-width: 1200px;
+  padding: 0 40px;
 }
+
+.lp-price h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 1.3;
+  max-width: 900px;
+}
+
+
+.lp-price-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  border: 3px solid #8900fc;
+  padding: 60px;
+  border-radius: 30px;
+  width: 100%;
+}
+
+.lp-details {
+  width: 55%;
+}
+
+.lp-details ul {
+  list-style: none;
+  padding: 0;
+}
+
+.lp-details li {
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.lp-details strong {
+  color: #8900fc;
+}
+
+.lp-price-price-container {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.lp-price-price {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  text-align: center;
+  border: 3px solid #8900fc;
+  background-color: #8900fc;
+  border-radius: 20px;
+  gap: 15px;
+}
+
+.lp-price-price h3 {
+  color: white;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 2rem;
+  margin: 0;
+}
+
+.lp-price-price h4 {
+  color: white;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.lp-price-price s {
+  opacity: 0.8;
+}
+
+/* BREAKPOINTS (TELAS MENORES) */
+
+/* Tablet grande (900px - 1199px) */
 @media (max-width: 1199px) {
-    .lp-price {
-      padding: 25px;
-      margin: 35px auto;
-    }
-    
-    .lp-price h2 {
-      font-size: 3rem;
-    }
-    
-    .lp-price h3 {
-      font-size: 1.6rem;
-    }
+  .lp-price {
+    margin: 80px auto;
+    padding: 0 30px;
+    gap: 30px;
   }
   
-  /* Tablet pequeno (600px - 899px) */
-  @media (max-width: 899px) {
-    .lp-price {
-      padding: 20px;
-      margin: 30px auto;
-      max-width: 500px;
-      border-radius: 35px;
-    }
-    
-    .lp-price h2 {
-      font-size: 2.5rem;
-    }
-    
-    .lp-price h3 {
-      font-size: 1.4rem;
-    }
+  .lp-price h2 {
+    font-size: 2.2rem;
   }
   
-  /* Mobile (até 599px) */
-  @media (max-width: 599px) {
-    .lp-price {
-      padding: 20px 15px;
-      margin: 25px auto;
-      max-width: 90%;
-      border-radius: 30px;
-      border-width: 2px;
-    }
-    
-    .lp-price h2 {
-      font-size: 2rem;
-    }
-    
-    .lp-price h3 {
-      font-size: 1.2rem;
-    }
+  .lp-price-container {
+    padding: 40px;
   }
+  
+  .lp-details li {
+    font-size: 1rem;
+    margin-bottom: 15px;
+  }
+  
+  .lp-price-price {
+    padding: 25px;
+  }
+  
+  .lp-price-price h3 {
+    font-size: 1.8rem;
+  }
+  
+  .lp-price-price h4 {
+    font-size: 1.3rem;
+  }
+}
+
+/* Tablet pequeno (600px - 899px) */
+@media (max-width: 899px) {
+  .lp-price {
+    margin: 60px auto;
+    padding: 0 20px;
+    gap: 25px;
+  }
+  
+  .lp-price h2 {
+    font-size: 1.8rem;
+    max-width: 100%;
+  }
+  
+  .lp-price-container {
+    flex-direction: column;
+    padding: 30px;
+    gap: 30px;
+  }
+  
+  .lp-details, .lp-price-price-container {
+    width: 100%;
+  }
+  
+  .lp-details li {
+    font-size: 0.95rem;
+    margin-bottom: 12px;
+  }
+  
+  .lp-price-price {
+    padding: 20px;
+  }
+  
+  .lp-price-price h3 {
+    font-size: 1.6rem;
+  }
+  
+  .lp-price-price h4 {
+    font-size: 1.1rem;
+  }
+}
+
+/* Mobile (até 599px) */
+@media (max-width: 599px) {
+  .lp-price {
+    margin: 50px auto;
+    padding: 0 15px;
+    gap: 20px;
+  }
+  
+  .lp-price h2 {
+    font-size: 1.5rem;
+  }
+  
+  .lp-price-container {
+    padding: 20px;
+    border-width: 2px;
+    border-radius: 20px;
+  }
+  
+  .lp-details li {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    line-height: 1.5;
+  }
+  
+  .lp-price-price {
+    padding: 15px;
+    border-radius: 15px;
+  }
+  
+  .lp-price-price h3 {
+    font-size: 1.3rem;
+  }
+  
+  .lp-price-price h4 {
+    font-size: 1rem;
+  }
+}

@@ -10,7 +10,7 @@ function LPWho() {
   return (
     <div className="lp-who">
       <div className="lp-who-text">
-        <h2>Para Quem <br /> é Este Curso?</h2>
+        <h2>Para quem é este curso?</h2>
         <ul>
           {targetAudience.map((item, index) => (
             <li key={index}>{item}</li>

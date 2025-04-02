@@ -34,53 +34,64 @@ const modulesData = [
 function LPWhatLearn() {
   return (
     <div className="lp-what-learn">
-    <h2>O Que Você Vai Aprender</h2>
-    <p>O curso é composto por 14 módulos detalhados:</p>
-    
-    <div className="swiper-container-wrapper">
-      <Swiper
-        modules={[Navigation]}
-        spaceBetween={30}
-        slidesPerView={2}
-        navigation={{
-          nextEl: '.custom-swiper-button-next',
-          prevEl: '.custom-swiper-button-prev',
-        }}
-        breakpoints={{
-          0: {    // Mobile
-            slidesPerView: 1,
-            spaceBetween: 20
-          },
-          600: {  // Tablet pequeno
-            slidesPerView: 2,
-            spaceBetween: 20
-          },
-          900: {  // Tablet grande
-            slidesPerView: 2,
-            spaceBetween: 30
-          },
-          1200: { // Desktop
-            slidesPerView: 2,
-            spaceBetween: 40
-          }
-        }}
-        className="lp-what-learn-slider"
-      >
-        {modulesData.map((module, index) => (
-          <SwiperSlide key={index}>
-            <div className="lp-what-learn-slide">
-              <h3>{module.title}</h3>
-              <p>{module.content}</p>
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
-      
-      <div className="custom-swiper-button-prev"></div>
-      <div className="custom-swiper-button-next"></div>
+      <div className="lp-what-learn-text">
+        <h2>O que você vai aprender?</h2>
+        <p>
+          Nossos 14 módulos foram cuidadosamente estruturados para te guiar
+          passo a passo, desde o diagnóstico até a prevenção de recaídas. Com
+          uma abordagem baseada em neurociência e terapia
+          cognitivo-comportamental, você terá as ferramentas certas para atender
+          seus pacientes com segurança, confiança e resultados duradouros.
+        </p>
+      </div>
+      <div className="swiper-container-wrapper">
+        <Swiper
+          modules={[Navigation]}
+          spaceBetween={30}
+          slidesPerView={2}
+          navigation={{
+            nextEl: ".custom-swiper-button-next",
+            prevEl: ".custom-swiper-button-prev",
+          }}
+          breakpoints={{
+            0: {
+              // Mobile
+              slidesPerView: 2,
+              spaceBetween: 10,
+            },
+            600: {
+              // Tablet pequeno
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            900: {
+              // Tablet grande
+              slidesPerView: 2,
+              spaceBetween: 30,
+            },
+            1200: {
+              // Desktop
+              slidesPerView: 3,
+              spaceBetween: 20,
+            },
+          }}
+          className="lp-what-learn-slider"
+        >
+          {modulesData.map((module, index) => (
+            <SwiperSlide key={index}>
+              <div className="lp-what-learn-slide">
+                <h3>{module.title}</h3>
+                <p>{module.content}</p>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+
+        <div className="custom-swiper-button-prev"></div>
+        <div className="custom-swiper-button-next"></div>
+      </div>
     </div>
-  </div>
-);
+  );
 }
 
 export default LPWhatLearn;

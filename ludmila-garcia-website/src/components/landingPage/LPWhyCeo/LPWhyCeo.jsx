@@ -4,7 +4,7 @@ function LPWhyCeo() {
   return (
     <div className="lp-why-ceo-container">
       <h2>
-        Por Que Escolher o <div className="purple"> Protocolo CEO</div>
+        Por que escolher o <div className="purple">Protocolo CEO ?</div>
       </h2>
       <div className="lp-why-list">
         <li>

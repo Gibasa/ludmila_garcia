@@ -3,8 +3,8 @@
   color: white;
   border: none;
   border-radius: 40px;
-  font-size: 2vw;
-  margin: 50px 0;
+  font-size: 1.5vw;
+  margin: 50px 0 100px 0;
   line-height: 30px;
 }
 
@@ -17,10 +17,22 @@
 
 .lp-bg-blue {
   background-color: #117eff;
+  margin-bottom: 0;
 }
 
 .lp-bg-blue:hover {
   background-color: #8900fc;
+}
+
+.lp-bg-white {
+  background-color: white;
+  color: #8900fc;
+  margin: 0;
+}
+.lp-bg-white:hover {
+  background-color: #117eff;
+  color: white;
+
 }
 @media (max-width: 1199px) {
   .lp-button {

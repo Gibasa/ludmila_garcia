@@ -11,7 +11,7 @@ function LPWhatEnd() {
 
   return (
     <div className="lp-what-end">
-      <h2>Ao Final Desse Curso <br /> Você Vai Conseguir:</h2>
+      <h2>Ao final desse curso <br /> você vai conseguir:</h2>
       <ul className="lp-what-end-list">
         {benefits.map((benefit, index) => (
           <li key={index}>{benefit}</li>
