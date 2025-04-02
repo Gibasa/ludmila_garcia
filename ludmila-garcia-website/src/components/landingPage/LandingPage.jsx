@@ -11,13 +11,14 @@ import LPTransform from "./LPTransform/LPTransform";
 import LPPrice from "./LPPrice/LPPrice";
 import LPProfile from "./LPProfile/LPProfile";
 import LPFaq from "./LPFaq/LPFaq";
+import LPVideo from "./LPVideo/LPVideo";
 
 function LandingPage() {
   return (
     <div className="landing-page">
-      <LPTopBanner />
-      
+      <LPTopBanner />      
       <LPCards />
+      <LPVideo/>
       <LPFaixas />
       <LPWhyCeo />
       <LPButton color="blue">
