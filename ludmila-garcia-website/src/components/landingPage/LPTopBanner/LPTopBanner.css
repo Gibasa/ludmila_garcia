@@ -90,10 +90,8 @@
     .lp-top-banner {
       padding: 0 15px;
       flex-direction: column-reverse;
-      gap: 50px;
-      margin-top: 0px;
-
-    }
+      gap: 10vw;
+      margin-top: 0px;    }
     
     .lp-top-banner h2 {
       font-size: 1.7rem;

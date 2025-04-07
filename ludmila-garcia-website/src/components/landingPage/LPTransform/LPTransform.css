@@ -219,6 +219,7 @@
 
   }
 
+
   .lp-transform-slide {
     width: 85%;
     padding: 15px 10px;
@@ -253,3 +254,10 @@
   }
 }
 
+@media (max-width: 380yypx) {
+
+  .lp-transform-slider{
+    height: 80vw;
+  }
+
+}

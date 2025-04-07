@@ -92,7 +92,38 @@
 /* === Responsividade === */
 
 /* Dispositivos até 767px (Mobile) */
-@media (max-width: 767px) {
+@media (max-width: 550px) {
+  .lp-what-learn {
+    padding: 0 10px;
+  }
+
+  .lp-what-learn h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  .lp-what-learn p {
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+    width: 100%;
+  }
+
+  .swiper-container-wrapper {
+    padding: 0 10px;
+    height: auto;
+    margin: 0;
+  }
+
+  .lp-what-learn-slide img {
+    width: 30vw; /* mais largura para facilitar visualização */
+  }
+
+  .custom-swiper-button-next,
+  .custom-swiper-button-prev {
+    display: none; /* oculta setas, usa swipe manual */
+  }
+}
+@media (min-width: 560px) and (max-width: 767px) {
   .lp-what-learn h2 {
     font-size: 1.7rem;
   }
