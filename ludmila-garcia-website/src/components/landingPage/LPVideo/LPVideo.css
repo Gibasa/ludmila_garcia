@@ -3,7 +3,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 80px auto;
+    margin: 0 auto;
     max-width: 1400px; /* Aumentei a largura máxima */
     padding: 0 20px;
     width: 100%;
@@ -11,7 +11,7 @@
   
   .lp-video-container h2 {
     color: #8900fc;
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     font-weight: 600;
     margin-bottom: 40px;
     text-align: center;
@@ -20,14 +20,13 @@
   
   .lp-video-wrapper {
     position: relative;
-    width: 90%; /* Ajuste para ocupar mais espaço */
+    width: 80%; /* Ajuste para ocupar mais espaço */
     max-width: 1000px; /* Largura máxima maior */
     padding-bottom: 50.625%; /* Proporção 16:9 ajustada (90% de 56.25%) */
     height: 0;
     overflow: hidden;
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    border: 3px solid #8900fc;
+    border: 5px solid #8900fc;
   }
   
   .lp-video-wrapper iframe {
@@ -37,15 +36,14 @@
     width: 100%;
     height: 100%;
     border: none;
+    object-fit: cover;
+    display: block;
   }
   
   /* BREAKPOINTS (TELAS MENORES) */
   
   /* Tablet grande (900px - 1199px) */
   @media (max-width: 1199px) {
-    .lp-video-container {
-      margin: 70px auto;
-    }
     
     .lp-video-container h2 {
       font-size: 2.2rem;
@@ -59,12 +57,9 @@
   
   /* Tablet pequeno (600px - 899px) */
   @media (max-width: 899px) {
-    .lp-video-container {
-      margin: 60px auto;
-    }
     
     .lp-video-container h2 {
-      font-size: 2rem;
+      font-size: 2.2rem;
     }
     
     .lp-video-wrapper {
@@ -77,12 +72,11 @@
   /* Mobile (até 599px) */
   @media (max-width: 599px) {
     .lp-video-container {
-      margin: 50px auto;
       padding: 0 15px;
     }
     
     .lp-video-container h2 {
-      font-size: 1.8rem;
+      font-size: 1.7rem;
     }
     
     .lp-video-wrapper {

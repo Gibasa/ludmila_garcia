@@ -5,6 +5,8 @@
     justify-content: center;
     align-items: center;
     font-family: "Lato", sans-serif;
+    gap: 50px;
+    overflow-x: hidden;
 }
 h2{
     font-style: italic;
@@ -13,15 +15,40 @@ h2{
 .purple{
     color: #8900fc;
 }
+.desktop{
+    display: block;
+}
+.mobile{
+    display: none;
+}
+.tablet {
+    display: none;
+}
 
 @media (max-width: 599px) {
     .landing-page{
         padding: 0;
+    }
+    .mobile{
+        display: block;
+    }
+    .desktop{
+        display: none;
+    }
+    .tablet {
+        display: none !important;
     }
 }
 
 @media (min-width: 600px) and (max-width: 899px) {
     .landing-page{
         padding: 0 5vw;
+    }
+
+    .tablet {
+        display: block;
+    }
+    .desktop {
+        display: none;
     }
 }

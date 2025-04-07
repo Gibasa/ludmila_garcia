@@ -1,89 +1,90 @@
 .lp-top-banner{
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: start;
     flex-direction: row-reverse;
-    margin-top: 0vw;
     width: 100%;
     
 }
 .lp-img-container{
-    background-image: url("/public/images/fundo asa lud.png");
+    /* background-image: url("/public/images/fundo asa lud.png");
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: center 50px;
+    background-position: center 50px; */
     width: 40vw;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     img{
-        width: 25vw;
+        width: 32vw;
     }
 }
 .lp-top-text{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: start;
     height: 100%;
-    
+    margin-top: 80px;  
     
     h2{
       
-      font-size: 2.5vw;
+      font-size: 2.8vw;
       font-weight: 700;
-      text-align: center;
+      text-align: left;
       margin-bottom: 1vw;
-      width: 100%;
+      width: 90%;
       
   }
   p{
       font-size: 1.5vw;
      width: 80%;
-      text-align: center;
+      text-align: left;
   }
 }
-
-@media (max-width: 1199px) {
-    .lp-top-banner h2 {
-      font-size: 2.2rem;
-    }
-    
-    .lp-top-banner p {
-      font-size: 1.2rem;
-    }
-    
-    .lp-img-container {
-      height: 70vh;
-    }
-  }
   
   /* Tablet pequeno (600px - 899px) */
-  @media (max-width: 899px) {
+  @media (max-width: 990px) {
     .lp-top-banner{
-      flex-direction: column;
-    }
-    .lp-top-banner {
-      margin-top: 50px;
+      flex-direction: column-reverse;
+      margin: 50px 0 100px;
+      gap: 150px;
+      justify-content:center ;
+      align-items: center;
+        }
+
+    .lp-top-text{
+      justify-content: center;
+      align-items: center;
     }
     .lp-top-banner h2 {
-      font-size: 1.8rem;
+      font-size: 2.2rem;
       margin-bottom: 15px;
+      text-align: center;
+      width: 90%;
     }
     
     .lp-top-banner p {
       font-size: 1.1rem;
       margin-bottom: 20px;
+      text-align: center;
+      width: 60%;
+
     }
     
     .lp-img-container {
       height: 60vh;
       width: 60%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
     
     .lp-img-container img {
       width: 90%;
+      margin-bottom: 50px;
+      
     }
   }
   
@@ -91,15 +92,15 @@
   @media (max-width: 599px) {
     
     .lp-top-banner {
-      margin-top: 150px;
       padding: 0 15px;
-      flex-direction: column;
+      flex-direction: column-reverse;
       gap: 150px;
+      margin-top: 0px;
 
     }
     
     .lp-top-banner h2 {
-      font-size: 1.5rem;
+      font-size: 1.7rem;
       margin-bottom: 10px;
     }
     
@@ -107,6 +108,7 @@
       font-size: 1rem;
       text-align: center;
       margin-bottom: 15px;
+      width: 80%;
     }
     
     .lp-img-container {

@@ -3,12 +3,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
     h2{
         font-style: italic;
         font-weight: 600;
         margin: 40px 0;
-        font-size: 3.3vw;
+        font-size: 2.8rem;
     }
     img{
         width: 40vw;
@@ -16,14 +15,11 @@
     }
     p{
         text-align: center;
-        width: 70vw;
+        width: 60vw;
     }
 }
 @media (max-width: 1199px) {
-    .lp-profile {
-      margin: 70px auto;
-    }
-    
+     
     .lp-profile h2 {
       font-size: 2.4rem;
       margin: 35px 0;
@@ -42,12 +38,11 @@
   /* Tablet pequeno (600px - 899px) */
   @media (max-width: 899px) {
     .lp-profile {
-      margin: 60px auto;
       padding: 0 30px;
     }
     
     .lp-profile h2 {
-      font-size: 2rem;
+      font-size: 2.2rem;
       margin: 30px 0;
     }
     
@@ -57,7 +52,7 @@
     }
     
     .lp-profile p {
-      font-size: 1rem;
+      font-size: 1.2rem;
       max-width: 90%;
       margin-bottom: 20px;
     }
@@ -66,12 +61,11 @@
   /* Mobile (até 599px) */
   @media (max-width: 599px) {
     .lp-profile {
-      margin: 50px auto;
       padding: 0 20px;
     }
     
     .lp-profile h2 {
-      font-size: 1.8rem;
+      font-size: 1.7rem;
       margin: 25px 0;
     }
     
@@ -83,8 +77,8 @@
     }
     
     .lp-profile p {
-      font-size: 0.95rem;
-      max-width: 100%;
+      font-size: 1rem;
+;
       margin-bottom: 18px;
       line-height: 1.6;
     }

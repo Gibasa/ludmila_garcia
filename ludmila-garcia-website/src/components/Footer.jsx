@@ -12,7 +12,7 @@ function Footer() {
   return (
     <div className="footer">
       <div className="footer-text">
-        <p>Me conheça um pouco mais nas redes sociais:</p>
+        <p>Me conheça um pouco <br className="mobile"/> mais nas redes sociais:</p>
       </div>
       <div className="footer-social">
         <a

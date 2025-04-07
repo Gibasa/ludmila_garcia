@@ -1,21 +1,20 @@
 .lp-what-learn {
   width: 100%;
   max-width: 1200px;
-  margin: 50px auto;
   padding: 0 20px;
   text-align: center;
 }
-.lp-what-learn-text{
+
+.lp-what-learn-text {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-
 .lp-what-learn h2 {
   color: #8900fc;
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   margin-bottom: 15px;
 }
 
@@ -28,44 +27,26 @@
 .swiper-container-wrapper {
   position: relative;
   padding: 0 40px;
+  height: 30vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .lp-what-learn-slider {
   padding: 20px 0;
+  overflow: hidden;
 }
 
 .lp-what-learn-slide {
-  background-color: #8900fc;
-  border: 3px solid #117eff;
-  border-radius: 15px;
-  color: white;
-  padding: 30px;
-  height: 350px;
-  width: 250px;
   display: flex;
-  flex-direction: column;
-  justify-content: end;
-  text-align: left;
-  font-style: italic;
-
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-  margin: 0 auto; /* Centraliza o slide */
+  justify-content: center;
 }
 
-.lp-what-learn-slide:hover {
-  transform: translateY(-5px);
-}
-
-.lp-what-learn-slide h3 {
-  font-size: 2rem;
-  margin-bottom: 15px;
-  font-weight: 600;
-}
-
-.lp-what-learn-slide p {
-  font-size: 1.3rem;
-  margin: 0;
+.lp-what-learn-slide img {
+  width: 15vw;
+  height: auto;
+  object-fit: contain;
 }
 
 .custom-swiper-button-next,
@@ -74,7 +55,7 @@
   top: 50%;
   transform: translateY(-50%);
   width: 40px;
-  height: 40px;  
+  height: 40px;
   border-radius: 50%;
   z-index: 10;
   cursor: pointer;
@@ -108,111 +89,68 @@
   content: 'prev';
 }
 
-@media (max-width: 1199px) {
-  .lp-what-learn {
-    padding: 0 30px;
-  }
-  
-  .lp-what-learn-slide {
-    height: 350px;
-    padding: 30px 25px;
-  }
-  
-  .lp-what-learn-slide h3 {
-    font-size: 2rem;
-  }
-  
-  .lp-what-learn-slide p {
-    font-size: 1.3rem;
-  }
-}
+/* === Responsividade === */
 
-/* Tablet pequeno (600px - 899px) */
-@media (max-width: 899px) {
-  .lp-what-learn {
-    margin: 60px auto;
-  }
-  
+/* Dispositivos até 767px (Mobile) */
+@media (max-width: 767px) {
   .lp-what-learn h2 {
-    font-size: 2.2rem;
+    font-size: 1.7rem;
   }
-  
-  .lp-what-learn p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-  }
-  
-  .swiper-container-wrapper {
-    padding: 0 50px;
-  }
-  
-  .lp-what-learn-slide {
-    height: 280px;
-    width: 170px;
-    padding: 25px 20px;
-  }
-  
-  .lp-what-learn-slide h3 {
-    font-size: 1.8rem;
-  }
-  
-  .custom-swiper-button-next,
-  .custom-swiper-button-prev {
-    width: 50px;
-    height: 50px;
-    font-size: 20px;
-  }
-}
 
-/* Mobile (até 599px) */
-@media (max-width: 599px) {
-  .lp-what-learn {
-    margin: 40px auto;
-    padding: 0 20px;
-  }
-  
-  .lp-what-learn h2 {
-    font-size: 1.8rem;
-  }
-  
   .lp-what-learn p {
-    font-size: 1.1rem;
+    font-size: 1rem;
     margin-bottom: 20px;
   }
-  
+
   .swiper-container-wrapper {
-    padding: 0 30px;
+    padding: 0 20px;
+    height: 30vw;
+    margin-top: 80px;
   }
-  
-  .lp-what-learn-slider {
-    padding: 20px 0;
+
+  .lp-what-learn-slide img {
+   width: 25vw;
+   
   }
-  
-  .lp-what-learn-slide {
-    height: 250px;
-    padding: 20px 15px;
-  }
-  
-  .lp-what-learn-slide h3 {
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-  }
-  
-  .lp-what-learn-slide p {
-    font-size: 1rem;
-  }
-  
+
   .custom-swiper-button-next,
   .custom-swiper-button-prev {
     width: 40px;
     height: 40px;
     font-size: 18px;
+    top: 20%;
   }
+}
+
+/* Tablet (768px a 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
   
-  /* Ajuste para mostrar apenas 1 slide no mobile */
-  .lp-what-learn-slider .swiper-slide {
-    width: 100% !important;
-    max-width: 350px;
-    margin: 0 auto;
+  .lp-what-learn-slide {
+    margin: 0; 
+    padding: 0; 
   }
+  .lp-what-learn-slide img {
+    width: 25vw; 
+    margin: 0;
+    padding: 0;
+  }
+
+  .lp-what-learn h2 {
+    font-size: 2.2rem;
+  }
+
+  .swiper-container-wrapper {
+    padding: 0;
+    height: 50vw;   
+  }
+
+  .custom-swiper-button-next,
+  .custom-swiper-button-prev {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+/* Desktop abaixo de 1200px */
+@media (max-width: 1199px) {
 }

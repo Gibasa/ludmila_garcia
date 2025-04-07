@@ -3,7 +3,7 @@
     align-items: center;
     justify-content: center;
     gap: 8vw;
-    margin: 100px 0;
+    margin: 0 auto;
     img{
         width: 25vw;
         height: auto;
@@ -18,6 +18,7 @@
         font-style: italic;
         font-weight: 600;
         font-size: 2.5vw;
+        color: #8900fc;
     }
     li{
         padding: 10px 0;
@@ -30,7 +31,6 @@
 @media (max-width: 1199px) {
     .lp-who {
       gap: 60px;
-      margin: 70px auto;
     }
     
     .lp-who-text h2 {
@@ -51,7 +51,6 @@
     .lp-who {
       flex-direction: column;
       gap: 40px;
-      margin: 60px auto;
       padding: 0 30px;
       text-align: center;
     }
@@ -85,18 +84,24 @@
   /* Mobile (até 599px) */
   @media (max-width: 599px) {
     .lp-who {
-      margin: 40px auto;
       padding: 0 20px;
       gap: 30px;
     }
+    .lp-who-text ul{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
     
     .lp-who-text h2 {
-      font-size: 1.8rem;
+      font-size: 1.7rem;
     }
     
     .lp-who-text li {
       font-size: 1rem;
       padding: 10px 0 10px 25px;
+      width: 85%;
     }
     
     .lp-who img {

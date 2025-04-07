@@ -1,7 +1,5 @@
 .lp-faq {
   width: 100%;
-  margin: 100px 0;
-
   h2 {
     color: #8900fc;
     font-size: 2.5vw;
@@ -68,7 +66,6 @@
 
 @media (max-width: 1199px) {
   .lp-faq {
-    margin: 70px auto;
     padding: 0 30px;
   }
   
@@ -90,7 +87,6 @@
 /* Tablet pequeno (600px - 899px) */
 @media (max-width: 899px) {
   .lp-faq {
-    margin: 60px auto;
     padding: 0 25px;
   }
   
@@ -116,16 +112,21 @@
 /* Mobile (até 599px) */
 @media (max-width: 599px) {
   .lp-faq {
-    margin: 50px auto;
     padding: 0 20px;
   }
   
   .lp-faq h2 {
     font-size: 1.8rem;
+    text-align: center;
+  }
+  .lp-faq-accordion{
+    justify-content: center;
+    align-items: center;
   }
   
   .lp-faq-item {
     border-radius: 10px !important;
+    width: 85%;
   }
   
   .accordion-button {

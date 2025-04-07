@@ -42,7 +42,7 @@ function App() {
         <Route path="/marketing" element={<Marketing />}></Route>
         <Route path="/compulsao" element={<Compulsao />}></Route>
         <Route path="/contato" element={<Contato />}></Route>
-        <Route path="/landingPage" element={<LandingPage />}></Route>
+        <Route path="/protocolo-ceo" element={<LandingPage />}></Route>
       </Routes>
       <Cookie/>
 

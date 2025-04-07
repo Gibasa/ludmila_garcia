@@ -1,0 +1,109 @@
+/* ESTILOS BASE (DESKTOP) */
+.lp-contact-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border: 3px solid #8900fc;
+    border-radius: 20px;
+    padding: 40px;
+    margin: 0 auto;
+    max-width: 600px;
+    text-align: center;
+  }
+  
+  .lp-contact-title {
+    color: #8900fc;
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+  
+  .lp-contact-text {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 30px;
+    line-height: 1.6;
+  }
+  
+  .lp-whatsapp-button {
+    background-color: #25D366;
+    color: white !important;
+    border: none;
+    border-radius: 40px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 15px 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+  }
+  
+  .lp-whatsapp-button:hover {
+    background-color: #128C7E;
+    transform: translateY(-2px);
+  }
+  
+  .whatsapp-icon {
+    font-size: 1.5em;
+    height: 1em;
+  }
+  
+  /* BREAKPOINTS (TELAS MENORES) */
+  
+  
+  /* Tablet pequeno (600px - 899px) */
+  @media (max-width: 899px) {
+    .lp-contact-card {
+      padding: 30px;
+      max-width: 90%;
+    }
+    
+    .lp-contact-title {
+      font-size: 2.2rem;
+    }
+    
+    .lp-contact-text {
+      font-size: 1.2rem;
+      margin-bottom: 25px;
+    }
+    
+    .lp-whatsapp-button {
+      padding: 12px 24px;
+      font-size: 1.2rem;
+      gap: 10px;
+    }
+  }
+  
+  /* Mobile (até 599px) */
+  @media (max-width: 599px) {
+    .lp-contact-card {
+      padding: 25px 20px;
+      border-radius: 15px;
+      border-width: 2px;
+    }
+    
+    .lp-contact-title {
+      font-size: 1.7rem;
+      margin-bottom: 15px;
+    }
+    
+    .lp-contact-text {
+      font-size: 1rem;
+      margin-bottom: 20px;
+    }
+    
+    .lp-whatsapp-button {
+      padding: 10px 20px;
+      font-size: 1rem;
+      gap: 8px;
+      border-radius: 30px;
+    }
+    
+    .whatsapp-icon {
+      font-size: 1.2em;
+    }
+  }

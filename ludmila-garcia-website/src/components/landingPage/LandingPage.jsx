@@ -12,38 +12,36 @@ import LPPrice from "./LPPrice/LPPrice";
 import LPProfile from "./LPProfile/LPProfile";
 import LPFaq from "./LPFaq/LPFaq";
 import LPVideo from "./LPVideo/LPVideo";
+import LPContact from "./LPContact/LPContact";
+import LPTestimonialVideo from "./LPTestimonialVideo/LPTestimonialVideo";
 
 function LandingPage() {
   return (
     <div className="landing-page">
-      <LPTopBanner />      
+      <LPTopBanner />
+      <LPVideo />
       <LPCards />
-      <LPVideo/>
       <LPFaixas />
       <LPWhyCeo />
+      <LPTestimonialVideo/>
+      <LPButton color="blue">DÊ O PRÓXIMO PASSO NA SUA CARREIRA</LPButton>
+      <LPWhatLearn />
       <LPButton color="blue">
-        DÊ O PRÓXIMO PASSO NA SUA CARREIRA
+        FAÇA SUA INSCRIÇÃO E TENHA ACESSO IMEDIATO
       </LPButton>
-      <LPWhatLearn/>
-      <LPButton color="blue">
-        FAÇA SUA INSCRIÇÃO E <br />
-        TENHA ACESSO IMEDIATO
-      </LPButton>
-      <LPWhatEnd/>
-      <LPButton color="blue">
-        COMECE AGORA E ELEVE
-        SUA PRÁTICA CLÍNICA
-      </LPButton>
-      <LPWho/>
-      <LPTransform/>
+      <LPWhatEnd />
+      <LPButton color="blue">COMECE AGORA E ELEVE SUA PRÁTICA CLÍNICA</LPButton>
+      <LPWho />
+      <LPTransform />
       <LPButton color="blue">
         GARANTA SEUS BÔNUS EXCLUSIVOS <br />
         AO SE INSCREVER AGORA
       </LPButton>
-      <LPPrice/>
-      
-      <LPProfile/>
-      <LPFaq/>
+      <LPPrice />
+      <LPButton color="blue">QUERO ME INSCREVER COM DESCONTO </LPButton>
+      <LPProfile />
+      <LPContact />
+      <LPFaq />
     </div>
   );
 }

@@ -12,7 +12,7 @@ function FooterPurple() {
   return (
     <div className="footer-p">
       <div className="footer-p-text">
-        <p>Me conheça um pouco mais nas redes sociais:</p>
+        <p>Me conheça um pouco <br className="mobile"/> mais nas redes sociais:</p>
       </div>
       <div className="footer-p-social">
       <a href="https://www.instagram.com/ludmila.garcia.psi" target="_blank" rel="noopener noreferrer">

@@ -2,7 +2,7 @@ import "./LPWho.css";
 
 function LPWho() {
   const targetAudience = [
-    "Psicólogos clínicos que desejam se especializar em transtornos alimentares.",
+    "Psicólogas clínicos que desejam se especializar em transtornos alimentares.",
     "Profissionais que buscam uma abordagem estruturada e eficaz.",
     "Terapeutas que querem elevar seus resultados e diferenciar-se no mercado."
   ];

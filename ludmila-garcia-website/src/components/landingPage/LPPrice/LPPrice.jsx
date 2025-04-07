@@ -1,4 +1,4 @@
-import LPButton from "../LPButton/LPButton";
+
 import "./LPPrice.css";
 
 function LPPrice() {
@@ -49,8 +49,8 @@ function LPPrice() {
     <div className="lp-price">
       <h2>
         Você está a um passo de{" "}
-        <span className="purple"> transformar sua carreira</span> e elevar seus
-        atendimentos a outro nível!
+        <span className="purple"> transformar sua carreira</span> <br className="desktop"/> e elevar seus
+        atendimentos <br className="mobile"/>a outro nível!
       </h2>
       <div className="lp-price-container">
         <div className="lp-details">
@@ -68,11 +68,10 @@ function LPPrice() {
             <h3>De: R$ <s>1.997,00</s> </h3>
             <h3>
               {" "}
-              Por apenas 12x de <br /> R$ 103,11 no cartão
+              Por apenas 12x<br /> de  R$ 103,11 <br/>no cartão
             </h3>
             <h4>ou R$ 997,00 à vista</h4>
           </div>
-          <LPButton color="blue">TRANSFORME SUA CARREIRA AGORA </LPButton>
         </div>
       </div>
     </div>

@@ -167,12 +167,12 @@ function Header() {
                 </Dropdown.Item>
                 <Dropdown.Item
                   as={Link}
-                  to="/compulsao"
+                  to="/protocolo-ceo"
                   onClick={() => {
                     handleNavItemClick();
                   }}
                 >
-                  NEUROCIÊNCIA DA COMPULSÃO ALIMENTAR
+                  CURSO PROTOCOLO CEO
                 </Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>

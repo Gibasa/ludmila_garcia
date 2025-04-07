@@ -17,7 +17,6 @@ function HeaderPurple() {
   const currentPath = location.pathname;
   const navigate = useNavigate();
 
-
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 0) {
@@ -63,7 +62,6 @@ function HeaderPurple() {
   };
 
   function scrollToSection(sectionId, delay = 100) {
-  
     return new Promise((resolve) => {
       navigate("/");
       setTimeout(() => {
@@ -80,7 +78,11 @@ function HeaderPurple() {
   }
 
   return (
-    <Navbar data-bs-theme="dark" expand="lg" className={`header-bg-p ${scrolled ? "scrolled" : ""}`}>
+    <Navbar
+      data-bs-theme="dark"
+      expand="lg"
+      className={`header-bg-p ${scrolled ? "scrolled" : ""}`}
+    >
       <Container className="header-container-p">
         <Navbar.Brand className="header-logo-p order-lg-first" as={Link} to="/">
           <img
@@ -110,7 +112,11 @@ function HeaderPurple() {
               onMouseLeave={handlePacientesHoverLeave}
               show={isPacientesDropdownOpen}
             >
-              <Dropdown.Toggle as={Link} to="#" className="header-pacientes-p header-dropdown-toggle">
+              <Dropdown.Toggle
+                as={Link}
+                to="#"
+                className="header-pacientes-p header-dropdown-toggle"
+              >
                 PARA PACIENTES
               </Dropdown.Toggle>
               <Dropdown.Menu className="dropdown-menu-p">
@@ -127,15 +133,19 @@ function HeaderPurple() {
               onMouseLeave={handlePsicologosHoverLeave}
               show={isPsicologosDropdownOpen}
             >
-              <Dropdown.Toggle as={Link} to="#" className="header-psicologos-p header-dropdown-toggle">
+              <Dropdown.Toggle
+                as={Link}
+                to="#"
+                className="header-psicologos-p header-dropdown-toggle"
+              >
                 PARA PSICÓLOGOS
               </Dropdown.Toggle>
               <Dropdown.Menu className="dropdown-menu-p">
                 <Dropdown.Item as={Link} to="/marketing">
                   MARKETING PARA PSIS
                 </Dropdown.Item>
-                <Dropdown.Item as={Link} to="/compulsao">
-                  NEUROCIÊNCIA DA COMPULSÃO ALIMENTAR
+                <Dropdown.Item as={Link} to="/protocolo-ceo">
+                  CURSO PROTOCOLO CEO
                 </Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
