@@ -105,7 +105,7 @@
   .swiper-container-wrapper {
     padding: 0 20px;
     height: 30vw;
-    margin-top: 80px;
+    margin-top: 50vw;
   }
 
   .lp-what-learn-slide img {
@@ -115,10 +115,7 @@
 
   .custom-swiper-button-next,
   .custom-swiper-button-prev {
-    width: 40px;
-    height: 40px;
-    font-size: 18px;
-    top: 20%;
+    display: none;
   }
 }
 

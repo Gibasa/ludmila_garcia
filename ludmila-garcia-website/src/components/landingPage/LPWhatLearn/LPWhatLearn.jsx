@@ -1,6 +1,6 @@
 import "./LPWhatLearn.css";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
+import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -22,9 +22,14 @@ function LPWhatLearn() {
       </div>
       <div className="swiper-container-wrapper">
         <Swiper
-          modules={[Navigation]}
+          modules={[Navigation, Autoplay]}
           spaceBetween={30}
           loop={true}
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+          }}
           navigation={{
             nextEl: ".custom-swiper-button-next",
             prevEl: ".custom-swiper-button-prev",

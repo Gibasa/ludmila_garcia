@@ -28,6 +28,7 @@ h2{
 @media (max-width: 599px) {
     .landing-page{
         padding: 0;
+        gap: 20px;
     }
     .mobile{
         display: block;
