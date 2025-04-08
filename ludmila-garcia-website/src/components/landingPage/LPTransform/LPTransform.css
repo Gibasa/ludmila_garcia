@@ -253,11 +253,3 @@
     display: none; /* Esconde os botões no mobile para evitar sobreposição */
   }
 }
-
-@media (max-width: 380yypx) {
-
-  .lp-transform-slider{
-    height: 80vw;
-  }
-
-}

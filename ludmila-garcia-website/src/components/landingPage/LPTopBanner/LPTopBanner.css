@@ -1,118 +1,115 @@
-.lp-top-banner{
-    display: flex;
-    justify-content: center;
-    align-items: start;
-    flex-direction: row-reverse;
-    width: 100%;
-    margin-top: 50px;
-    
+.lp-top-banner {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: row-reverse;
+  width: 100%;
+  margin-top: 50px;
 }
-.lp-img-container{
-    width: 40vw;
-    height: 100vh;
+.lp-img-container {
+  width: 40vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    width: 32vw;
+  }
+}
+.lp-top-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  height: 100%;
+  margin-top: 80px;
+
+  h2 {
+    font-size: 2.8vw;
+    font-weight: 700;
+    text-align: left;
+    margin-bottom: 1vw;
+    width: 90%;
+  }
+  p {
+    font-size: 1.5vw;
+    width: 80%;
+    text-align: left;
+  }
+}
+
+/* Tablet pequeno (600px - 899px) */
+@media (max-width: 990px) {
+  .lp-top-banner {
+    flex-direction: column-reverse;
+    gap: 150px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .lp-top-text {
+    justify-content: center;
+    align-items: center;
+  }
+  .lp-top-banner h2 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    text-align: center;
+    width: 90%;
+  }
+
+  .lp-top-banner p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 60%;
+  }
+
+  .lp-img-container {
+    height: 60vh;
+    width: 60%;
     display: flex;
     justify-content: center;
     align-items: center;
-    img{
-        width: 32vw;
-    }
-}
-.lp-top-text{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: start;
-    height: 100%;
-    margin-top: 80px;  
-    
-    h2{
-      
-      font-size: 2.8vw;
-      font-weight: 700;
-      text-align: left;
-      margin-bottom: 1vw;
-      width: 90%;
-      
   }
-  p{
-      font-size: 1.5vw;
-     width: 80%;
-      text-align: left;
+
+  .lp-img-container img {
+    width: 90%;
+    margin-bottom: 50px;
   }
 }
-  
-  /* Tablet pequeno (600px - 899px) */
-  @media (max-width: 990px) {
-    .lp-top-banner{
-      flex-direction: column-reverse;
-      gap: 150px;
-      justify-content:center ;
-      align-items: center;
-        }
 
-    .lp-top-text{
-      justify-content: center;
-      align-items: center;
-    }
-    .lp-top-banner h2 {
-      font-size: 2.2rem;
-      margin-bottom: 15px;
-      text-align: center;
-      width: 90%;
-    }
-    
-    .lp-top-banner p {
-      font-size: 1.1rem;
-      margin-bottom: 20px;
-      text-align: center;
-      width: 60%;
+/* Mobile (até 599px) */
+@media (max-width: 599px) {
+  .lp-top-banner {
+    padding: 0 15px;
+    flex-direction: column-reverse;
+    gap: 20vw;
+    margin-top: 0px;
+  }
+  .lp-top-text{
+    margin-top: 0;
+  }
 
-    }
-    
-    .lp-img-container {
-      height: 60vh;
-      width: 60%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    
-    .lp-img-container img {
-      width: 90%;
-      margin-bottom: 50px;
-      
-    }
+  .lp-top-banner h2 {
+    font-size: 1.7rem;
+    margin-bottom: 10px;
   }
-  
-  /* Mobile (até 599px) */
-  @media (max-width: 599px) {
-    
-    .lp-top-banner {
-      padding: 0 15px;
-      flex-direction: column-reverse;
-      gap: 10vw;
-      margin-top: 0px;    }
-    
-    .lp-top-banner h2 {
-      font-size: 1.7rem;
-      margin-bottom: 10px;
-    }
-    
-    .lp-top-banner p {
-      font-size: 1rem;
-      text-align: center;
-      margin-bottom: 15px;
-      width: 80%;
-    }
-    
-    .lp-img-container {
-      height: 40vh;
-      width: 80%;
-      background-position: center 30px;
-    }
-    
-    .lp-img-container img {
-      width: 90%;
-    }
+
+  .lp-top-banner p {
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 15px;
+    width: 80%;
   }
-  
+
+  .lp-img-container {
+    height: 40vh;
+    width: 80%;
+    background-position: center 30px;
+  }
+
+  .lp-img-container img {
+    width: 90%;
+  }
+}

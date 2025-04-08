@@ -35,8 +35,7 @@ function LPProfile() {
         para auxiliar no emagrecimento sem dietas e nos transtornos alimentares.
       </p>
       <p>
-        Ministro o curso on-line Neurociência Emagrecimento da Compulsão
-        Alimentar e Obesidade para Psicólogos.
+        Ministro o Protocolo CEO para o tratamento da Compulsão Alimentar, Emagrecimento e Obesidade.
       </p>
       <p>Líder do Grupo de Mentoria Psi de Alta Performance.</p>
       <p>Ministro palestras e supervisão para psicólogos(as).</p>

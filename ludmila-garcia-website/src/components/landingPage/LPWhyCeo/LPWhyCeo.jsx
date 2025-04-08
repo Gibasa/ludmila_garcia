@@ -4,8 +4,9 @@ function LPWhyCeo() {
   return (
     <div className="lp-why-ceo-container">
       <h2>
-        Por que escolher o <div className="purple">Protocolo CEO ?</div>
+        Por que escolher o
       </h2>
+      <h2 className="purple">Protocolo Ceo?</h2>
       <div className="lp-why-list">
         <li>
           100% baseado em evidências: aplicação prática da neurociência e
